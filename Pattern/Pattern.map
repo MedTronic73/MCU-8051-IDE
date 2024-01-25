@@ -1,0 +1,695 @@
+ASxxxx Linker V03.00 + NoICE + sdld,  page 1.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CABS                                00000000    00000000 =           0. bytes (ABS,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000000  l_BIT_BANK                      
+C:   00000000  l_BSEG                          
+C:   00000000  l_BSEG_BYTES                    
+C:   00000000  l_CABS                          
+C:   00000000  l_CONST                         
+C:   00000000  l_GSINIT1                       
+C:   00000000  l_GSINIT5                       
+C:   00000000  l_IABS                          
+C:   00000000  l_ISEG                          
+C:   00000000  l_OSEG                          
+C:   00000000  l_PSEG                          
+C:   00000000  l_REG_BANK_1                    
+C:   00000000  l_REG_BANK_2                    
+C:   00000000  l_REG_BANK_3                    
+C:   00000000  l_RSEG                          
+C:   00000000  l_RSEG0                         
+C:   00000000  l_RSEG1                         
+C:   00000000  l_XABS                          
+C:   00000000  l_XINIT                         
+C:   00000000  l_XISEG                         
+C:   00000000  l_XSEG                          
+C:   00000000  l__CODE                         
+C:   00000000  s_BSEG                          
+C:   00000000  s_CABS                          
+C:   00000000  s_DSEG                          
+C:   00000000  s_HOME                          
+C:   00000000  s_IABS                          
+C:   00000000  s_ISEG                          
+C:   00000000  s_REG_BANK_0                    
+C:   00000000  s_RSEG                          
+C:   00000000  s_RSEG0                         
+C:   00000000  s_RSEG1                         
+C:   00000000  s_XABS                          
+C:   00000001  s_PSEG                          
+C:   00000001  s_XISEG                         
+C:   00000001  s_XSEG                          
+C:   00000003  l_GSFINAL                       
+C:   00000003  l_GSINIT0                       
+C:   00000006  l_HOME                          
+C:   00000006  s_GSINIT0                       
+C:   00000008  l_REG_BANK_0                    
+C:   00000008  s_REG_BANK_1                    
+C:   00000009  s_GSINIT1                       
+C:   00000009  s_GSINIT2                       
+C:   0000000A  l_GSINIT2                       
+C:   00000010  s_REG_BANK_2                    
+C:   00000013  s_GSINIT3                       
+C:   00000018  s_BIT_BANK                      
+C:   00000018  s_OSEG                          
+C:   00000018  s_REG_BANK_3                    
+ASxxxx Linker V03.00 + NoICE + sdld,  page 2.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CABS                                00000000    00000000 =           0. bytes (ABS,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000020  s_BSEG_BYTES                    
+C:   00000020  s__CODE                         
+C:   00000022  l_GSINIT3                       
+C:   0000002A  l_GSINIT4                       
+C:   00000035  s_GSINIT4                       
+C:   00000043  s_SSEG                          
+C:   0000005F  s_GSINIT                        
+C:   0000005F  s_GSINIT5                       
+C:   00000080  l_DSEG                          
+C:   00000090  l_GSINIT                        
+C:   000000BD  l_SSEG                          
+C:   000000EC  l_CSEG                          
+C:   000000EF  s_GSFINAL                       
+C:   000000F2  s_CSEG                          
+C:   00000100  l_IRAM                          
+C:   000001DE  s_CONST                         
+C:   000001DE  s_XINIT                         
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 3.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000000  .__.ABS.                           _startup
+     00000050  FPattern$mode$0_0$0                Pattern
+     00000051  FPattern$modePtr$0_0$0             Pattern
+     00000052  FPattern$x$0_0$0                   Pattern
+     00000053  FPattern$RamPatternPtr$0_0$0       Pattern
+     00000080  G$P0$0_0$0                         Pattern
+     00000080  G$P0_0$0_0$0                       Pattern
+     00000080  _P0                                Pattern
+     00000080  _P0_0                              Pattern
+     00000081  G$P0_1$0_0$0                       Pattern
+     00000081  G$SP$0_0$0                         Pattern
+     00000081  _P0_1                              Pattern
+     00000081  _SP                                Pattern
+     00000082  G$DPL$0_0$0                        Pattern
+     00000082  G$P0_2$0_0$0                       Pattern
+     00000082  _DPL                               Pattern
+     00000082  _P0_2                              Pattern
+     00000083  G$DPH$0_0$0                        Pattern
+     00000083  G$P0_3$0_0$0                       Pattern
+     00000083  _DPH                               Pattern
+     00000083  _P0_3                              Pattern
+     00000084  G$P0_4$0_0$0                       Pattern
+     00000084  _P0_4                              Pattern
+     00000085  G$P0_5$0_0$0                       Pattern
+     00000085  _P0_5                              Pattern
+     00000086  G$P0_6$0_0$0                       Pattern
+     00000086  _P0_6                              Pattern
+     00000087  G$P0_7$0_0$0                       Pattern
+     00000087  G$PCON$0_0$0                       Pattern
+     00000087  _P0_7                              Pattern
+     00000087  _PCON                              Pattern
+     00000088  G$IT0$0_0$0                        Pattern
+     00000088  G$TCON$0_0$0                       Pattern
+     00000088  _IT0                               Pattern
+     00000088  _TCON                              Pattern
+     00000089  G$IE0$0_0$0                        Pattern
+     00000089  G$TMOD$0_0$0                       Pattern
+     00000089  _IE0                               Pattern
+     00000089  _TMOD                              Pattern
+     0000008A  G$IT1$0_0$0                        Pattern
+     0000008A  G$TL0$0_0$0                        Pattern
+     0000008A  _IT1                               Pattern
+     0000008A  _TL0                               Pattern
+     0000008B  G$IE1$0_0$0                        Pattern
+     0000008B  G$TL1$0_0$0                        Pattern
+     0000008B  _IE1                               Pattern
+     0000008B  _TL1                               Pattern
+     0000008C  G$TH0$0_0$0                        Pattern
+     0000008C  G$TR0$0_0$0                        Pattern
+     0000008C  _TH0                               Pattern
+ASxxxx Linker V03.00 + NoICE + sdld,  page 4.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000008C  _TR0                               Pattern
+     0000008D  G$TF0$0_0$0                        Pattern
+     0000008D  G$TH1$0_0$0                        Pattern
+     0000008D  _TF0                               Pattern
+     0000008D  _TH1                               Pattern
+     0000008E  G$TR1$0_0$0                        Pattern
+     0000008E  _TR1                               Pattern
+     0000008F  G$TF1$0_0$0                        Pattern
+     0000008F  _TF1                               Pattern
+     00000090  G$P1$0_0$0                         Pattern
+     00000090  G$P1_0$0_0$0                       Pattern
+     00000090  _P1                                Pattern
+     00000090  _P1_0                              Pattern
+     00000091  G$P1_1$0_0$0                       Pattern
+     00000091  _P1_1                              Pattern
+     00000092  G$P1_2$0_0$0                       Pattern
+     00000092  _P1_2                              Pattern
+     00000093  G$P1_3$0_0$0                       Pattern
+     00000093  _P1_3                              Pattern
+     00000094  G$P1_4$0_0$0                       Pattern
+     00000094  _P1_4                              Pattern
+     00000095  G$P1_5$0_0$0                       Pattern
+     00000095  _P1_5                              Pattern
+     00000096  G$P1_6$0_0$0                       Pattern
+     00000096  _P1_6                              Pattern
+     00000097  G$P1_7$0_0$0                       Pattern
+     00000097  _P1_7                              Pattern
+     00000098  G$RI$0_0$0                         Pattern
+     00000098  G$SCON$0_0$0                       Pattern
+     00000098  _RI                                Pattern
+     00000098  _SCON                              Pattern
+     00000099  G$SBUF$0_0$0                       Pattern
+     00000099  G$TI$0_0$0                         Pattern
+     00000099  _SBUF                              Pattern
+     00000099  _TI                                Pattern
+     0000009A  G$RB8$0_0$0                        Pattern
+     0000009A  _RB8                               Pattern
+     0000009B  G$TB8$0_0$0                        Pattern
+     0000009B  _TB8                               Pattern
+     0000009C  G$REN$0_0$0                        Pattern
+     0000009C  _REN                               Pattern
+     0000009D  G$SM2$0_0$0                        Pattern
+     0000009D  _SM2                               Pattern
+     0000009E  G$SM1$0_0$0                        Pattern
+     0000009E  _SM1                               Pattern
+     0000009F  G$SM0$0_0$0                        Pattern
+     0000009F  _SM0                               Pattern
+     000000A0  G$P2$0_0$0                         Pattern
+     000000A0  G$P2_0$0_0$0                       Pattern
+     000000A0  _P2                                Pattern
+     000000A0  _P2_0                              Pattern
+ASxxxx Linker V03.00 + NoICE + sdld,  page 5.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000A0  __XPAGE                            
+     000000A1  G$P2_1$0_0$0                       Pattern
+     000000A1  _P2_1                              Pattern
+     000000A2  G$P2_2$0_0$0                       Pattern
+     000000A2  _P2_2                              Pattern
+     000000A3  G$P2_3$0_0$0                       Pattern
+     000000A3  _P2_3                              Pattern
+     000000A4  G$P2_4$0_0$0                       Pattern
+     000000A4  _P2_4                              Pattern
+     000000A5  G$P2_5$0_0$0                       Pattern
+     000000A5  _P2_5                              Pattern
+     000000A6  G$P2_6$0_0$0                       Pattern
+     000000A6  _P2_6                              Pattern
+     000000A7  G$P2_7$0_0$0                       Pattern
+     000000A7  _P2_7                              Pattern
+     000000A8  G$EX0$0_0$0                        Pattern
+     000000A8  G$IE$0_0$0                         Pattern
+     000000A8  _EX0                               Pattern
+     000000A8  _IE                                Pattern
+     000000A9  G$ET0$0_0$0                        Pattern
+     000000A9  _ET0                               Pattern
+     000000AA  G$EX1$0_0$0                        Pattern
+     000000AA  _EX1                               Pattern
+     000000AB  G$ET1$0_0$0                        Pattern
+     000000AB  _ET1                               Pattern
+     000000AC  G$ES$0_0$0                         Pattern
+     000000AC  _ES                                Pattern
+     000000AF  G$EA$0_0$0                         Pattern
+     000000AF  _EA                                Pattern
+     000000B0  G$P3$0_0$0                         Pattern
+     000000B0  G$P3_0$0_0$0                       Pattern
+     000000B0  G$RXD$0_0$0                        Pattern
+     000000B0  _P3                                Pattern
+     000000B0  _P3_0                              Pattern
+     000000B0  _RXD                               Pattern
+     000000B1  G$P3_1$0_0$0                       Pattern
+     000000B1  G$TXD$0_0$0                        Pattern
+     000000B1  _P3_1                              Pattern
+     000000B1  _TXD                               Pattern
+     000000B2  G$INT0$0_0$0                       Pattern
+     000000B2  G$P3_2$0_0$0                       Pattern
+     000000B2  _INT0                              Pattern
+     000000B2  _P3_2                              Pattern
+     000000B3  G$INT1$0_0$0                       Pattern
+     000000B3  G$P3_3$0_0$0                       Pattern
+     000000B3  _INT1                              Pattern
+     000000B3  _P3_3                              Pattern
+     000000B4  G$P3_4$0_0$0                       Pattern
+     000000B4  G$T0$0_0$0                         Pattern
+     000000B4  _P3_4                              Pattern
+     000000B4  _T0                                Pattern
+ASxxxx Linker V03.00 + NoICE + sdld,  page 6.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000B5  G$P3_5$0_0$0                       Pattern
+     000000B5  G$T1$0_0$0                         Pattern
+     000000B5  _P3_5                              Pattern
+     000000B5  _T1                                Pattern
+     000000B6  G$P3_6$0_0$0                       Pattern
+     000000B6  G$WR$0_0$0                         Pattern
+     000000B6  _P3_6                              Pattern
+     000000B6  _WR                                Pattern
+     000000B7  G$P3_7$0_0$0                       Pattern
+     000000B7  G$RD$0_0$0                         Pattern
+     000000B7  _P3_7                              Pattern
+     000000B7  _RD                                Pattern
+     000000B8  G$IP$0_0$0                         Pattern
+     000000B8  G$PX0$0_0$0                        Pattern
+     000000B8  _IP                                Pattern
+     000000B8  _PX0                               Pattern
+     000000B9  G$PT0$0_0$0                        Pattern
+     000000B9  _PT0                               Pattern
+     000000BA  G$PX1$0_0$0                        Pattern
+     000000BA  _PX1                               Pattern
+     000000BB  G$PT1$0_0$0                        Pattern
+     000000BB  _PT1                               Pattern
+     000000BC  G$PS$0_0$0                         Pattern
+     000000BC  _PS                                Pattern
+     000000D0  G$P$0_0$0                          Pattern
+     000000D0  G$PSW$0_0$0                        Pattern
+     000000D0  _P                                 Pattern
+     000000D0  _PSW                               Pattern
+     000000D1  G$F1$0_0$0                         Pattern
+     000000D1  _F1                                Pattern
+     000000D2  G$OV$0_0$0                         Pattern
+     000000D2  _OV                                Pattern
+     000000D3  G$RS0$0_0$0                        Pattern
+     000000D3  _RS0                               Pattern
+     000000D4  G$RS1$0_0$0                        Pattern
+     000000D4  _RS1                               Pattern
+     000000D5  G$F0$0_0$0                         Pattern
+     000000D5  _F0                                Pattern
+     000000D6  G$AC$0_0$0                         Pattern
+     000000D6  _AC                                Pattern
+     000000D7  G$CY$0_0$0                         Pattern
+     000000D7  _CY                                Pattern
+     000000E0  G$ACC$0_0$0                        Pattern
+     000000E0  _ACC                               Pattern
+     000000F0  G$B$0_0$0                          Pattern
+     000000F0  _B                                 Pattern
+     000000F5  _B_5                               _gptrget
+     000000F6  _B_6                               _gptrget
+     000000F7  _B_7                               _gptrget
+ASxxxx Linker V03.00 + NoICE + sdld,  page 7.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+REG_BANK_0                          00000000    00000008 =           8. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 8.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+DSEG                                00000000    00000080 =         128. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000008  G$Pattern1$0_0$0                   Pattern
+     00000008  _Pattern1                          Pattern
+     00000010  G$Pattern2$0_0$0                   Pattern
+     00000010  _Pattern2                          Pattern
+     00000018  G$Pattern3$0_0$0                   Pattern
+     00000018  _Pattern3                          Pattern
+     00000020  G$Pattern4$0_0$0                   Pattern
+     00000020  _Pattern4                          Pattern
+     00000028  G$Pattern5$0_0$0                   Pattern
+     00000028  _Pattern5                          Pattern
+     00000030  G$Pattern6$0_0$0                   Pattern
+     00000030  _Pattern6                          Pattern
+     00000038  G$RamPattern$0_0$0                 Pattern
+     00000038  _RamPattern                        Pattern
+     00000040  G$patternPtr$0_0$0                 Pattern
+     00000040  _patternPtr                        Pattern
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 9.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+SSEG                                00000043    000000BD =         189. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000043  __start__stack                     Pattern
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 10.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+HOME                                00000000    00000006 =           6. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000000  A$Pattern$415                      Pattern
+C:   00000003  A$Pattern$497                      Pattern
+C:   00000003  __sdcc_program_startup             Pattern
+ASxxxx Linker V03.00 + NoICE + sdld,  page 11.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT0                             00000006    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000006  __sdcc_gsinit_startup              
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 12.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT2                             00000009    0000000A =          10. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 13.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT3                             00000013    00000022 =          34. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000013  __mcs51_genXINIT                   
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 14.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT4                             00000035    0000002A =          42. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000035  __mcs51_genRAMCLEAR                
+C:   0000003B  __mcs51_genXRAMCLEAR               
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 15.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT                              0000005F    00000090 =         144. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000005F  A$Pattern$431                      Pattern
+C:   0000005F  C$Pattern.c$3$1_0$6                Pattern
+C:   00000062  A$Pattern$432                      Pattern
+C:   00000065  A$Pattern$433                      Pattern
+C:   00000068  A$Pattern$434                      Pattern
+C:   0000006B  A$Pattern$435                      Pattern
+C:   0000006E  A$Pattern$436                      Pattern
+C:   00000071  A$Pattern$437                      Pattern
+C:   00000074  A$Pattern$438                      Pattern
+C:   00000077  A$Pattern$441                      Pattern
+C:   00000077  C$Pattern.c$4$1_0$6                Pattern
+C:   0000007A  A$Pattern$442                      Pattern
+C:   0000007D  A$Pattern$443                      Pattern
+C:   00000080  A$Pattern$444                      Pattern
+C:   00000083  A$Pattern$445                      Pattern
+C:   00000086  A$Pattern$446                      Pattern
+C:   00000089  A$Pattern$447                      Pattern
+C:   0000008C  A$Pattern$448                      Pattern
+C:   0000008F  A$Pattern$451                      Pattern
+C:   0000008F  C$Pattern.c$5$1_0$6                Pattern
+C:   00000092  A$Pattern$452                      Pattern
+C:   00000095  A$Pattern$453                      Pattern
+C:   00000098  A$Pattern$454                      Pattern
+C:   0000009B  A$Pattern$455                      Pattern
+C:   0000009E  A$Pattern$456                      Pattern
+C:   000000A1  A$Pattern$457                      Pattern
+C:   000000A4  A$Pattern$458                      Pattern
+C:   000000A7  A$Pattern$461                      Pattern
+C:   000000A7  C$Pattern.c$6$1_0$6                Pattern
+C:   000000AA  A$Pattern$462                      Pattern
+C:   000000AD  A$Pattern$463                      Pattern
+C:   000000B0  A$Pattern$464                      Pattern
+C:   000000B3  A$Pattern$465                      Pattern
+C:   000000B6  A$Pattern$466                      Pattern
+C:   000000B9  A$Pattern$467                      Pattern
+C:   000000BC  A$Pattern$468                      Pattern
+C:   000000BF  A$Pattern$471                      Pattern
+C:   000000BF  C$Pattern.c$7$1_0$6                Pattern
+C:   000000C2  A$Pattern$472                      Pattern
+C:   000000C5  A$Pattern$473                      Pattern
+C:   000000C8  A$Pattern$474                      Pattern
+C:   000000CB  A$Pattern$475                      Pattern
+C:   000000CE  A$Pattern$476                      Pattern
+C:   000000D1  A$Pattern$477                      Pattern
+C:   000000D4  A$Pattern$478                      Pattern
+C:   000000D7  A$Pattern$481                      Pattern
+C:   000000D7  C$Pattern.c$8$1_0$6                Pattern
+C:   000000DA  A$Pattern$482                      Pattern
+C:   000000DD  A$Pattern$483                      Pattern
+C:   000000E0  A$Pattern$484                      Pattern
+ASxxxx Linker V03.00 + NoICE + sdld,  page 16.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT                              0000005F    00000090 =         144. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000000E3  A$Pattern$485                      Pattern
+C:   000000E6  A$Pattern$486                      Pattern
+C:   000000E9  A$Pattern$487                      Pattern
+C:   000000EC  A$Pattern$488                      Pattern
+ASxxxx Linker V03.00 + NoICE + sdld,  page 17.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSFINAL                             000000EF    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000000EF  A$Pattern$490                      Pattern
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 18.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000F2    000000EC =         236. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000000F2  A$Pattern$523                      Pattern
+C:   000000F2  C$Pattern.c$19$0_0$2               Pattern
+C:   000000F2  G$delay$0$0                        Pattern
+C:   000000F2  _delay                             Pattern
+C:   000000F4  A$Pattern$524                      Pattern
+C:   000000F6  A$Pattern$528                      Pattern
+C:   000000F6  C$Pattern.c$22$1_0$2               Pattern
+C:   000000F8  A$Pattern$529                      Pattern
+C:   000000FA  A$Pattern$530                      Pattern
+C:   000000FB  A$Pattern$531                      Pattern
+C:   000000FE  A$Pattern$532                      Pattern
+C:   000000FF  A$Pattern$534                      Pattern
+C:   00000100  A$Pattern$535                      Pattern
+C:   00000101  A$Pattern$536                      Pattern
+C:   00000103  A$Pattern$541                      Pattern
+C:   00000103  C$Pattern.c$23$1_0$2               Pattern
+C:   00000103  XG$delay$0$0                       Pattern
+C:   00000104  A$Pattern$554                      Pattern
+C:   00000104  C$Pattern.c$24$1_0$4               Pattern
+C:   00000104  C$Pattern.c$26$1_0$4               Pattern
+C:   00000104  G$button$0$0                       Pattern
+C:   00000104  _button                            Pattern
+C:   00000107  A$Pattern$555                      Pattern
+C:   0000010A  A$Pattern$556                      Pattern
+C:   0000010D  A$Pattern$560                      Pattern
+C:   0000010D  C$Pattern.c$28$1_0$4               Pattern
+C:   0000010F  A$Pattern$561                      Pattern
+C:   00000110  A$Pattern$562                      Pattern
+C:   00000111  A$Pattern$563                      Pattern
+C:   00000113  A$Pattern$564                      Pattern
+C:   00000116  A$Pattern$565                      Pattern
+C:   00000119  A$Pattern$569                      Pattern
+C:   00000119  C$Pattern.c$29$1_0$4               Pattern
+C:   0000011B  A$Pattern$570                      Pattern
+C:   0000011D  A$Pattern$571                      Pattern
+C:   00000120  A$Pattern$572                      Pattern
+C:   00000122  A$Pattern$573                      Pattern
+C:   00000125  A$Pattern$577                      Pattern
+C:   00000125  C$Pattern.c$30$1_0$4               Pattern
+C:   00000127  A$Pattern$578                      Pattern
+C:   0000012A  A$Pattern$579                      Pattern
+C:   0000012D  A$Pattern$580                      Pattern
+C:   00000130  A$Pattern$581                      Pattern
+C:   00000133  A$Pattern$585                      Pattern
+C:   00000133  C$Pattern.c$31$1_0$4               Pattern
+C:   00000135  A$Pattern$586                      Pattern
+C:   00000138  A$Pattern$587                      Pattern
+C:   0000013B  A$Pattern$588                      Pattern
+C:   0000013E  A$Pattern$589                      Pattern
+C:   00000141  A$Pattern$593                      Pattern
+ASxxxx Linker V03.00 + NoICE + sdld,  page 19.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000F2    000000EC =         236. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000141  C$Pattern.c$32$1_0$4               Pattern
+C:   00000143  A$Pattern$594                      Pattern
+C:   00000146  A$Pattern$595                      Pattern
+C:   00000149  A$Pattern$596                      Pattern
+C:   0000014C  A$Pattern$597                      Pattern
+C:   0000014F  A$Pattern$601                      Pattern
+C:   0000014F  C$Pattern.c$33$1_0$4               Pattern
+C:   00000151  A$Pattern$602                      Pattern
+C:   00000154  A$Pattern$603                      Pattern
+C:   00000157  A$Pattern$604                      Pattern
+C:   0000015A  A$Pattern$605                      Pattern
+C:   0000015D  A$Pattern$609                      Pattern
+C:   0000015D  C$Pattern.c$34$1_0$4               Pattern
+C:   0000015F  A$Pattern$610                      Pattern
+C:   00000162  A$Pattern$611                      Pattern
+C:   00000165  A$Pattern$612                      Pattern
+C:   00000168  A$Pattern$613                      Pattern
+C:   0000016B  A$Pattern$617                      Pattern
+C:   0000016B  C$Pattern.c$35$1_0$4               Pattern
+C:   0000016E  A$Pattern$620                      Pattern
+C:   0000016E  C$Pattern.c$36$1_0$4               Pattern
+C:   00000171  A$Pattern$626                      Pattern
+C:   00000171  C$Pattern.c$37$1_0$4               Pattern
+C:   00000171  XG$button$0$0                      Pattern
+C:   00000172  A$Pattern$639                      Pattern
+C:   00000172  C$Pattern.c$38$1_0$6               Pattern
+C:   00000172  C$Pattern.c$40$1_0$6               Pattern
+C:   00000172  G$main$0$0                         Pattern
+C:   00000172  _main                              Pattern
+C:   00000175  A$Pattern$642                      Pattern
+C:   00000175  C$Pattern.c$41$1_0$6               Pattern
+C:   00000178  A$Pattern$645                      Pattern
+C:   00000178  C$Pattern.c$42$1_0$6               Pattern
+C:   0000017B  A$Pattern$648                      Pattern
+C:   0000017B  C$Pattern.c$43$1_0$6               Pattern
+C:   0000017E  A$Pattern$649                      Pattern
+C:   00000181  A$Pattern$650                      Pattern
+C:   00000184  A$Pattern$653                      Pattern
+C:   00000184  C$Pattern.c$44$1_0$6               Pattern
+C:   00000187  A$Pattern$659                      Pattern
+C:   00000187  C$Pattern.c$45$1_0$6               Pattern
+C:   0000018A  A$Pattern$661                      Pattern
+C:   0000018C  A$Pattern$662                      Pattern
+C:   0000018E  A$Pattern$663                      Pattern
+C:   00000190  A$Pattern$666                      Pattern
+C:   00000190  C$Pattern.c$49$4_0$9               Pattern
+C:   00000192  A$Pattern$667                      Pattern
+C:   00000194  A$Pattern$668                      Pattern
+C:   00000195  A$Pattern$669                      Pattern
+C:   00000196  A$Pattern$670                      Pattern
+C:   00000198  A$Pattern$671                      Pattern
+ASxxxx Linker V03.00 + NoICE + sdld,  page 20.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000F2    000000EC =         236. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000199  A$Pattern$672                      Pattern
+C:   0000019B  A$Pattern$673                      Pattern
+C:   0000019D  A$Pattern$674                      Pattern
+C:   0000019F  A$Pattern$675                      Pattern
+C:   000001A1  A$Pattern$676                      Pattern
+C:   000001A4  A$Pattern$677                      Pattern
+C:   000001A6  A$Pattern$680                      Pattern
+C:   000001A6  C$Pattern.c$50$4_0$9               Pattern
+C:   000001A9  A$Pattern$681                      Pattern
+C:   000001AC  A$Pattern$684                      Pattern
+C:   000001AC  C$Pattern.c$51$4_0$9               Pattern
+C:   000001AF  A$Pattern$685                      Pattern
+C:   000001B1  A$Pattern$686                      Pattern
+C:   000001B3  A$Pattern$687                      Pattern
+C:   000001B6  A$Pattern$691                      Pattern
+C:   000001B6  C$Pattern.c$47$3_0$8               Pattern
+C:   000001B8  A$Pattern$692                      Pattern
+C:   000001B9  A$Pattern$693                      Pattern
+C:   000001BB  A$Pattern$694                      Pattern
+C:   000001BD  A$Pattern$699                      Pattern
+C:   000001BD  C$Pattern.c$54$1_0$6               Pattern
+C:   000001BD  XG$main$0$0                        Pattern
+C:   000001BE  __gptrget                          _gptrget
+C:   000001DA  __sdcc_external_startup            _startup
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 21.
+
+Files Linked                              [ module(s) ]
+
+Pattern.rel                               [  ]
+
+
+Libraries Linked                          [ object file ]
+
+C:\Program Files\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtclear.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtxinit.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtxclear.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtpagesfr.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtstart.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/libsdcc.lib
+                                          [ _gptrget.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/libsdcc.lib
+                                          [ _startup.rel ]
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 22.
+
+User Base Address Definitions
+
+HOME = 0x0000
+XSEG = 0x0001
+PSEG = 0x0001
+ISEG = 0x0000
+BSEG = 0x0000
+
+

@@ -1,0 +1,857 @@
+                                      1 ;--------------------------------------------------------
+                                      2 ; File Created by SDCC : free open source ANSI-C Compiler
+                                      3 ; Version 4.2.0 #13081 (MINGW32)
+                                      4 ;--------------------------------------------------------
+                                      5 	.module RomPattern
+                                      6 	.optsdcc -mmcs51 --model-small
+                                      7 	
+                                      8 ;--------------------------------------------------------
+                                      9 ; Public variables in this module
+                                     10 ;--------------------------------------------------------
+                                     11 	.globl _Pattern6
+                                     12 	.globl _Pattern5
+                                     13 	.globl _Pattern4
+                                     14 	.globl _Pattern3
+                                     15 	.globl _Pattern2
+                                     16 	.globl _Pattern1
+                                     17 	.globl _main
+                                     18 	.globl _button
+                                     19 	.globl _Download_Array
+                                     20 	.globl _delay
+                                     21 	.globl _CY
+                                     22 	.globl _AC
+                                     23 	.globl _F0
+                                     24 	.globl _RS1
+                                     25 	.globl _RS0
+                                     26 	.globl _OV
+                                     27 	.globl _F1
+                                     28 	.globl _P
+                                     29 	.globl _PS
+                                     30 	.globl _PT1
+                                     31 	.globl _PX1
+                                     32 	.globl _PT0
+                                     33 	.globl _PX0
+                                     34 	.globl _RD
+                                     35 	.globl _WR
+                                     36 	.globl _T1
+                                     37 	.globl _T0
+                                     38 	.globl _INT1
+                                     39 	.globl _INT0
+                                     40 	.globl _TXD
+                                     41 	.globl _RXD
+                                     42 	.globl _P3_7
+                                     43 	.globl _P3_6
+                                     44 	.globl _P3_5
+                                     45 	.globl _P3_4
+                                     46 	.globl _P3_3
+                                     47 	.globl _P3_2
+                                     48 	.globl _P3_1
+                                     49 	.globl _P3_0
+                                     50 	.globl _EA
+                                     51 	.globl _ES
+                                     52 	.globl _ET1
+                                     53 	.globl _EX1
+                                     54 	.globl _ET0
+                                     55 	.globl _EX0
+                                     56 	.globl _P2_7
+                                     57 	.globl _P2_6
+                                     58 	.globl _P2_5
+                                     59 	.globl _P2_4
+                                     60 	.globl _P2_3
+                                     61 	.globl _P2_2
+                                     62 	.globl _P2_1
+                                     63 	.globl _P2_0
+                                     64 	.globl _SM0
+                                     65 	.globl _SM1
+                                     66 	.globl _SM2
+                                     67 	.globl _REN
+                                     68 	.globl _TB8
+                                     69 	.globl _RB8
+                                     70 	.globl _TI
+                                     71 	.globl _RI
+                                     72 	.globl _P1_7
+                                     73 	.globl _P1_6
+                                     74 	.globl _P1_5
+                                     75 	.globl _P1_4
+                                     76 	.globl _P1_3
+                                     77 	.globl _P1_2
+                                     78 	.globl _P1_1
+                                     79 	.globl _P1_0
+                                     80 	.globl _TF1
+                                     81 	.globl _TR1
+                                     82 	.globl _TF0
+                                     83 	.globl _TR0
+                                     84 	.globl _IE1
+                                     85 	.globl _IT1
+                                     86 	.globl _IE0
+                                     87 	.globl _IT0
+                                     88 	.globl _P0_7
+                                     89 	.globl _P0_6
+                                     90 	.globl _P0_5
+                                     91 	.globl _P0_4
+                                     92 	.globl _P0_3
+                                     93 	.globl _P0_2
+                                     94 	.globl _P0_1
+                                     95 	.globl _P0_0
+                                     96 	.globl _B
+                                     97 	.globl _ACC
+                                     98 	.globl _PSW
+                                     99 	.globl _IP
+                                    100 	.globl _P3
+                                    101 	.globl _IE
+                                    102 	.globl _P2
+                                    103 	.globl _SBUF
+                                    104 	.globl _SCON
+                                    105 	.globl _P1
+                                    106 	.globl _TH1
+                                    107 	.globl _TH0
+                                    108 	.globl _TL1
+                                    109 	.globl _TL0
+                                    110 	.globl _TMOD
+                                    111 	.globl _TCON
+                                    112 	.globl _PCON
+                                    113 	.globl _DPH
+                                    114 	.globl _DPL
+                                    115 	.globl _SP
+                                    116 	.globl _P0
+                                    117 	.globl _patternData
+                                    118 	.globl _RamPattern
+                                    119 	.globl _patternAddress
+                                    120 	.globl _Address6
+                                    121 	.globl _Address5
+                                    122 	.globl _Address4
+                                    123 	.globl _Address3
+                                    124 	.globl _Address2
+                                    125 	.globl _Address1
+                                    126 ;--------------------------------------------------------
+                                    127 ; special function registers
+                                    128 ;--------------------------------------------------------
+                                    129 	.area RSEG    (ABS,DATA)
+      000000                        130 	.org 0x0000
+                           000080   131 G$P0$0_0$0 == 0x0080
+                           000080   132 _P0	=	0x0080
+                           000081   133 G$SP$0_0$0 == 0x0081
+                           000081   134 _SP	=	0x0081
+                           000082   135 G$DPL$0_0$0 == 0x0082
+                           000082   136 _DPL	=	0x0082
+                           000083   137 G$DPH$0_0$0 == 0x0083
+                           000083   138 _DPH	=	0x0083
+                           000087   139 G$PCON$0_0$0 == 0x0087
+                           000087   140 _PCON	=	0x0087
+                           000088   141 G$TCON$0_0$0 == 0x0088
+                           000088   142 _TCON	=	0x0088
+                           000089   143 G$TMOD$0_0$0 == 0x0089
+                           000089   144 _TMOD	=	0x0089
+                           00008A   145 G$TL0$0_0$0 == 0x008a
+                           00008A   146 _TL0	=	0x008a
+                           00008B   147 G$TL1$0_0$0 == 0x008b
+                           00008B   148 _TL1	=	0x008b
+                           00008C   149 G$TH0$0_0$0 == 0x008c
+                           00008C   150 _TH0	=	0x008c
+                           00008D   151 G$TH1$0_0$0 == 0x008d
+                           00008D   152 _TH1	=	0x008d
+                           000090   153 G$P1$0_0$0 == 0x0090
+                           000090   154 _P1	=	0x0090
+                           000098   155 G$SCON$0_0$0 == 0x0098
+                           000098   156 _SCON	=	0x0098
+                           000099   157 G$SBUF$0_0$0 == 0x0099
+                           000099   158 _SBUF	=	0x0099
+                           0000A0   159 G$P2$0_0$0 == 0x00a0
+                           0000A0   160 _P2	=	0x00a0
+                           0000A8   161 G$IE$0_0$0 == 0x00a8
+                           0000A8   162 _IE	=	0x00a8
+                           0000B0   163 G$P3$0_0$0 == 0x00b0
+                           0000B0   164 _P3	=	0x00b0
+                           0000B8   165 G$IP$0_0$0 == 0x00b8
+                           0000B8   166 _IP	=	0x00b8
+                           0000D0   167 G$PSW$0_0$0 == 0x00d0
+                           0000D0   168 _PSW	=	0x00d0
+                           0000E0   169 G$ACC$0_0$0 == 0x00e0
+                           0000E0   170 _ACC	=	0x00e0
+                           0000F0   171 G$B$0_0$0 == 0x00f0
+                           0000F0   172 _B	=	0x00f0
+                                    173 ;--------------------------------------------------------
+                                    174 ; special function bits
+                                    175 ;--------------------------------------------------------
+                                    176 	.area RSEG    (ABS,DATA)
+      000000                        177 	.org 0x0000
+                           000080   178 G$P0_0$0_0$0 == 0x0080
+                           000080   179 _P0_0	=	0x0080
+                           000081   180 G$P0_1$0_0$0 == 0x0081
+                           000081   181 _P0_1	=	0x0081
+                           000082   182 G$P0_2$0_0$0 == 0x0082
+                           000082   183 _P0_2	=	0x0082
+                           000083   184 G$P0_3$0_0$0 == 0x0083
+                           000083   185 _P0_3	=	0x0083
+                           000084   186 G$P0_4$0_0$0 == 0x0084
+                           000084   187 _P0_4	=	0x0084
+                           000085   188 G$P0_5$0_0$0 == 0x0085
+                           000085   189 _P0_5	=	0x0085
+                           000086   190 G$P0_6$0_0$0 == 0x0086
+                           000086   191 _P0_6	=	0x0086
+                           000087   192 G$P0_7$0_0$0 == 0x0087
+                           000087   193 _P0_7	=	0x0087
+                           000088   194 G$IT0$0_0$0 == 0x0088
+                           000088   195 _IT0	=	0x0088
+                           000089   196 G$IE0$0_0$0 == 0x0089
+                           000089   197 _IE0	=	0x0089
+                           00008A   198 G$IT1$0_0$0 == 0x008a
+                           00008A   199 _IT1	=	0x008a
+                           00008B   200 G$IE1$0_0$0 == 0x008b
+                           00008B   201 _IE1	=	0x008b
+                           00008C   202 G$TR0$0_0$0 == 0x008c
+                           00008C   203 _TR0	=	0x008c
+                           00008D   204 G$TF0$0_0$0 == 0x008d
+                           00008D   205 _TF0	=	0x008d
+                           00008E   206 G$TR1$0_0$0 == 0x008e
+                           00008E   207 _TR1	=	0x008e
+                           00008F   208 G$TF1$0_0$0 == 0x008f
+                           00008F   209 _TF1	=	0x008f
+                           000090   210 G$P1_0$0_0$0 == 0x0090
+                           000090   211 _P1_0	=	0x0090
+                           000091   212 G$P1_1$0_0$0 == 0x0091
+                           000091   213 _P1_1	=	0x0091
+                           000092   214 G$P1_2$0_0$0 == 0x0092
+                           000092   215 _P1_2	=	0x0092
+                           000093   216 G$P1_3$0_0$0 == 0x0093
+                           000093   217 _P1_3	=	0x0093
+                           000094   218 G$P1_4$0_0$0 == 0x0094
+                           000094   219 _P1_4	=	0x0094
+                           000095   220 G$P1_5$0_0$0 == 0x0095
+                           000095   221 _P1_5	=	0x0095
+                           000096   222 G$P1_6$0_0$0 == 0x0096
+                           000096   223 _P1_6	=	0x0096
+                           000097   224 G$P1_7$0_0$0 == 0x0097
+                           000097   225 _P1_7	=	0x0097
+                           000098   226 G$RI$0_0$0 == 0x0098
+                           000098   227 _RI	=	0x0098
+                           000099   228 G$TI$0_0$0 == 0x0099
+                           000099   229 _TI	=	0x0099
+                           00009A   230 G$RB8$0_0$0 == 0x009a
+                           00009A   231 _RB8	=	0x009a
+                           00009B   232 G$TB8$0_0$0 == 0x009b
+                           00009B   233 _TB8	=	0x009b
+                           00009C   234 G$REN$0_0$0 == 0x009c
+                           00009C   235 _REN	=	0x009c
+                           00009D   236 G$SM2$0_0$0 == 0x009d
+                           00009D   237 _SM2	=	0x009d
+                           00009E   238 G$SM1$0_0$0 == 0x009e
+                           00009E   239 _SM1	=	0x009e
+                           00009F   240 G$SM0$0_0$0 == 0x009f
+                           00009F   241 _SM0	=	0x009f
+                           0000A0   242 G$P2_0$0_0$0 == 0x00a0
+                           0000A0   243 _P2_0	=	0x00a0
+                           0000A1   244 G$P2_1$0_0$0 == 0x00a1
+                           0000A1   245 _P2_1	=	0x00a1
+                           0000A2   246 G$P2_2$0_0$0 == 0x00a2
+                           0000A2   247 _P2_2	=	0x00a2
+                           0000A3   248 G$P2_3$0_0$0 == 0x00a3
+                           0000A3   249 _P2_3	=	0x00a3
+                           0000A4   250 G$P2_4$0_0$0 == 0x00a4
+                           0000A4   251 _P2_4	=	0x00a4
+                           0000A5   252 G$P2_5$0_0$0 == 0x00a5
+                           0000A5   253 _P2_5	=	0x00a5
+                           0000A6   254 G$P2_6$0_0$0 == 0x00a6
+                           0000A6   255 _P2_6	=	0x00a6
+                           0000A7   256 G$P2_7$0_0$0 == 0x00a7
+                           0000A7   257 _P2_7	=	0x00a7
+                           0000A8   258 G$EX0$0_0$0 == 0x00a8
+                           0000A8   259 _EX0	=	0x00a8
+                           0000A9   260 G$ET0$0_0$0 == 0x00a9
+                           0000A9   261 _ET0	=	0x00a9
+                           0000AA   262 G$EX1$0_0$0 == 0x00aa
+                           0000AA   263 _EX1	=	0x00aa
+                           0000AB   264 G$ET1$0_0$0 == 0x00ab
+                           0000AB   265 _ET1	=	0x00ab
+                           0000AC   266 G$ES$0_0$0 == 0x00ac
+                           0000AC   267 _ES	=	0x00ac
+                           0000AF   268 G$EA$0_0$0 == 0x00af
+                           0000AF   269 _EA	=	0x00af
+                           0000B0   270 G$P3_0$0_0$0 == 0x00b0
+                           0000B0   271 _P3_0	=	0x00b0
+                           0000B1   272 G$P3_1$0_0$0 == 0x00b1
+                           0000B1   273 _P3_1	=	0x00b1
+                           0000B2   274 G$P3_2$0_0$0 == 0x00b2
+                           0000B2   275 _P3_2	=	0x00b2
+                           0000B3   276 G$P3_3$0_0$0 == 0x00b3
+                           0000B3   277 _P3_3	=	0x00b3
+                           0000B4   278 G$P3_4$0_0$0 == 0x00b4
+                           0000B4   279 _P3_4	=	0x00b4
+                           0000B5   280 G$P3_5$0_0$0 == 0x00b5
+                           0000B5   281 _P3_5	=	0x00b5
+                           0000B6   282 G$P3_6$0_0$0 == 0x00b6
+                           0000B6   283 _P3_6	=	0x00b6
+                           0000B7   284 G$P3_7$0_0$0 == 0x00b7
+                           0000B7   285 _P3_7	=	0x00b7
+                           0000B0   286 G$RXD$0_0$0 == 0x00b0
+                           0000B0   287 _RXD	=	0x00b0
+                           0000B1   288 G$TXD$0_0$0 == 0x00b1
+                           0000B1   289 _TXD	=	0x00b1
+                           0000B2   290 G$INT0$0_0$0 == 0x00b2
+                           0000B2   291 _INT0	=	0x00b2
+                           0000B3   292 G$INT1$0_0$0 == 0x00b3
+                           0000B3   293 _INT1	=	0x00b3
+                           0000B4   294 G$T0$0_0$0 == 0x00b4
+                           0000B4   295 _T0	=	0x00b4
+                           0000B5   296 G$T1$0_0$0 == 0x00b5
+                           0000B5   297 _T1	=	0x00b5
+                           0000B6   298 G$WR$0_0$0 == 0x00b6
+                           0000B6   299 _WR	=	0x00b6
+                           0000B7   300 G$RD$0_0$0 == 0x00b7
+                           0000B7   301 _RD	=	0x00b7
+                           0000B8   302 G$PX0$0_0$0 == 0x00b8
+                           0000B8   303 _PX0	=	0x00b8
+                           0000B9   304 G$PT0$0_0$0 == 0x00b9
+                           0000B9   305 _PT0	=	0x00b9
+                           0000BA   306 G$PX1$0_0$0 == 0x00ba
+                           0000BA   307 _PX1	=	0x00ba
+                           0000BB   308 G$PT1$0_0$0 == 0x00bb
+                           0000BB   309 _PT1	=	0x00bb
+                           0000BC   310 G$PS$0_0$0 == 0x00bc
+                           0000BC   311 _PS	=	0x00bc
+                           0000D0   312 G$P$0_0$0 == 0x00d0
+                           0000D0   313 _P	=	0x00d0
+                           0000D1   314 G$F1$0_0$0 == 0x00d1
+                           0000D1   315 _F1	=	0x00d1
+                           0000D2   316 G$OV$0_0$0 == 0x00d2
+                           0000D2   317 _OV	=	0x00d2
+                           0000D3   318 G$RS0$0_0$0 == 0x00d3
+                           0000D3   319 _RS0	=	0x00d3
+                           0000D4   320 G$RS1$0_0$0 == 0x00d4
+                           0000D4   321 _RS1	=	0x00d4
+                           0000D5   322 G$F0$0_0$0 == 0x00d5
+                           0000D5   323 _F0	=	0x00d5
+                           0000D6   324 G$AC$0_0$0 == 0x00d6
+                           0000D6   325 _AC	=	0x00d6
+                           0000D7   326 G$CY$0_0$0 == 0x00d7
+                           0000D7   327 _CY	=	0x00d7
+                                    328 ;--------------------------------------------------------
+                                    329 ; overlayable register banks
+                                    330 ;--------------------------------------------------------
+                                    331 	.area REG_BANK_0	(REL,OVR,DATA)
+      000000                        332 	.ds 8
+                                    333 ;--------------------------------------------------------
+                                    334 ; internal ram data
+                                    335 ;--------------------------------------------------------
+                                    336 	.area DSEG    (DATA)
+                           000000   337 G$Address1$0_0$0==.
+      000008                        338 _Address1::
+      000008                        339 	.ds 3
+                           000003   340 G$Address2$0_0$0==.
+      00000B                        341 _Address2::
+      00000B                        342 	.ds 3
+                           000006   343 G$Address3$0_0$0==.
+      00000E                        344 _Address3::
+      00000E                        345 	.ds 3
+                           000009   346 G$Address4$0_0$0==.
+      000011                        347 _Address4::
+      000011                        348 	.ds 3
+                           00000C   349 G$Address5$0_0$0==.
+      000014                        350 _Address5::
+      000014                        351 	.ds 3
+                           00000F   352 G$Address6$0_0$0==.
+      000017                        353 _Address6::
+      000017                        354 	.ds 3
+                           000012   355 G$patternAddress$0_0$0==.
+      00001A                        356 _patternAddress::
+      00001A                        357 	.ds 3
+                           000015   358 G$RamPattern$0_0$0==.
+      00001D                        359 _RamPattern::
+      00001D                        360 	.ds 8
+                           000040   361 G$patternData$0_0$0 == 0x0040
+                           000040   362 _patternData	=	0x0040
+                           000042   363 FRomPattern$mode$0_0$0 == 0x0042
+                           000042   364 _mode	=	0x0042
+                           000043   365 FRomPattern$modePtr$0_0$0 == 0x0043
+                           000043   366 _modePtr	=	0x0043
+                           000044   367 FRomPattern$x$0_0$0 == 0x0044
+                           000044   368 _x	=	0x0044
+                           000045   369 FRomPattern$RamPatternPtr$0_0$0 == 0x0045
+                           000045   370 _RamPatternPtr	=	0x0045
+                                    371 ;--------------------------------------------------------
+                                    372 ; overlayable items in internal ram
+                                    373 ;--------------------------------------------------------
+                                    374 ;--------------------------------------------------------
+                                    375 ; Stack segment in internal ram
+                                    376 ;--------------------------------------------------------
+                                    377 	.area	SSEG
+      000025                        378 __start__stack:
+      000025                        379 	.ds	1
+                                    380 
+                                    381 ;--------------------------------------------------------
+                                    382 ; indirectly addressable internal ram data
+                                    383 ;--------------------------------------------------------
+                                    384 	.area ISEG    (DATA)
+                                    385 ;--------------------------------------------------------
+                                    386 ; absolute internal ram data
+                                    387 ;--------------------------------------------------------
+                                    388 	.area IABS    (ABS,DATA)
+                                    389 	.area IABS    (ABS,DATA)
+                                    390 ;--------------------------------------------------------
+                                    391 ; bit data
+                                    392 ;--------------------------------------------------------
+                                    393 	.area BSEG    (BIT)
+                                    394 ;--------------------------------------------------------
+                                    395 ; paged external ram data
+                                    396 ;--------------------------------------------------------
+                                    397 	.area PSEG    (PAG,XDATA)
+                                    398 ;--------------------------------------------------------
+                                    399 ; external ram data
+                                    400 ;--------------------------------------------------------
+                                    401 	.area XSEG    (XDATA)
+                                    402 ;--------------------------------------------------------
+                                    403 ; absolute external ram data
+                                    404 ;--------------------------------------------------------
+                                    405 	.area XABS    (ABS,XDATA)
+                                    406 ;--------------------------------------------------------
+                                    407 ; external initialized ram data
+                                    408 ;--------------------------------------------------------
+                                    409 	.area XISEG   (XDATA)
+                                    410 	.area HOME    (CODE)
+                                    411 	.area GSINIT0 (CODE)
+                                    412 	.area GSINIT1 (CODE)
+                                    413 	.area GSINIT2 (CODE)
+                                    414 	.area GSINIT3 (CODE)
+                                    415 	.area GSINIT4 (CODE)
+                                    416 	.area GSINIT5 (CODE)
+                                    417 	.area GSINIT  (CODE)
+                                    418 	.area GSFINAL (CODE)
+                                    419 	.area CSEG    (CODE)
+                                    420 ;--------------------------------------------------------
+                                    421 ; interrupt vector
+                                    422 ;--------------------------------------------------------
+                                    423 	.area HOME    (CODE)
+      000000                        424 __interrupt_vect:
+      000000 02 00 06         [24]  425 	ljmp	__sdcc_gsinit_startup
+                                    426 ;--------------------------------------------------------
+                                    427 ; global & static initialisations
+                                    428 ;--------------------------------------------------------
+                                    429 	.area HOME    (CODE)
+                                    430 	.area GSINIT  (CODE)
+                                    431 	.area GSFINAL (CODE)
+                                    432 	.area GSINIT  (CODE)
+                                    433 	.globl __sdcc_gsinit_startup
+                                    434 	.globl __sdcc_program_startup
+                                    435 	.globl __start__stack
+                                    436 	.globl __mcs51_genXINIT
+                                    437 	.globl __mcs51_genXRAMCLEAR
+                                    438 	.globl __mcs51_genRAMCLEAR
+                           000000   439 	C$RomPattern.c$10$1_0$10 ==.
+                                    440 ;	RomPattern.c:10: const char *Address1 = &Pattern1[0]; /* Pointe to every pattern by a Pointer for it */	
+      00005F 75 08 13         [24]  441 	mov	_Address1,#_Pattern1
+      000062 75 09 02         [24]  442 	mov	(_Address1 + 1),#(_Pattern1 >> 8)
+      000065 75 0A 80         [24]  443 	mov	(_Address1 + 2),#0x80
+                           000009   444 	C$RomPattern.c$11$1_0$10 ==.
+                                    445 ;	RomPattern.c:11: const char *Address2 = &Pattern2[0]; /* Every Pointer will be at ram and pointe to Rom */
+      000068 75 0B 1B         [24]  446 	mov	_Address2,#_Pattern2
+      00006B 75 0C 02         [24]  447 	mov	(_Address2 + 1),#(_Pattern2 >> 8)
+      00006E 75 0D 80         [24]  448 	mov	(_Address2 + 2),#0x80
+                           000012   449 	C$RomPattern.c$12$1_0$10 ==.
+                                    450 ;	RomPattern.c:12: const char *Address3 = &Pattern3[0];	
+      000071 75 0E 23         [24]  451 	mov	_Address3,#_Pattern3
+      000074 75 0F 02         [24]  452 	mov	(_Address3 + 1),#(_Pattern3 >> 8)
+      000077 75 10 80         [24]  453 	mov	(_Address3 + 2),#0x80
+                           00001B   454 	C$RomPattern.c$13$1_0$10 ==.
+                                    455 ;	RomPattern.c:13: const char *Address4 = &Pattern4[0];	
+      00007A 75 11 2B         [24]  456 	mov	_Address4,#_Pattern4
+      00007D 75 12 02         [24]  457 	mov	(_Address4 + 1),#(_Pattern4 >> 8)
+      000080 75 13 80         [24]  458 	mov	(_Address4 + 2),#0x80
+                           000024   459 	C$RomPattern.c$14$1_0$10 ==.
+                                    460 ;	RomPattern.c:14: const char *Address5 = &Pattern5[0];	
+      000083 75 14 33         [24]  461 	mov	_Address5,#_Pattern5
+      000086 75 15 02         [24]  462 	mov	(_Address5 + 1),#(_Pattern5 >> 8)
+      000089 75 16 80         [24]  463 	mov	(_Address5 + 2),#0x80
+                           00002D   464 	C$RomPattern.c$15$1_0$10 ==.
+                                    465 ;	RomPattern.c:15: const char *Address6 = &Pattern6[0];	
+      00008C 75 17 3B         [24]  466 	mov	_Address6,#_Pattern6
+      00008F 75 18 02         [24]  467 	mov	(_Address6 + 1),#(_Pattern6 >> 8)
+      000092 75 19 80         [24]  468 	mov	(_Address6 + 2),#0x80
+                           000036   469 	C$RomPattern.c$17$1_0$10 ==.
+                                    470 ;	RomPattern.c:17: const char *patternAddress = &Pattern1[0]; /* General Pointer for the start Array */	
+      000095 75 1A 13         [24]  471 	mov	_patternAddress,#_Pattern1
+      000098 75 1B 02         [24]  472 	mov	(_patternAddress + 1),#(_Pattern1 >> 8)
+      00009B 75 1C 80         [24]  473 	mov	(_patternAddress + 2),#0x80
+                                    474 	.area GSFINAL (CODE)
+      00009E 02 00 03         [24]  475 	ljmp	__sdcc_program_startup
+                                    476 ;--------------------------------------------------------
+                                    477 ; Home
+                                    478 ;--------------------------------------------------------
+                                    479 	.area HOME    (CODE)
+                                    480 	.area HOME    (CODE)
+      000003                        481 __sdcc_program_startup:
+      000003 02 01 A9         [24]  482 	ljmp	_main
+                                    483 ;	return from main will return to caller
+                                    484 ;--------------------------------------------------------
+                                    485 ; code
+                                    486 ;--------------------------------------------------------
+                                    487 	.area CSEG    (CODE)
+                                    488 ;------------------------------------------------------------
+                                    489 ;Allocation info for local variables in function 'delay'
+                                    490 ;------------------------------------------------------------
+                                    491 ;ms                        Allocated to registers r6 r7 
+                                    492 ;------------------------------------------------------------
+                           000000   493 	G$delay$0$0 ==.
+                           000000   494 	C$RomPattern.c$29$0_0$2 ==.
+                                    495 ;	RomPattern.c:29: void delay(int ms )            /* How to get 125mS.. */
+                                    496 ;	-----------------------------------------
+                                    497 ;	 function delay
+                                    498 ;	-----------------------------------------
+      0000A1                        499 _delay:
+                           000007   500 	ar7 = 0x07
+                           000006   501 	ar6 = 0x06
+                           000005   502 	ar5 = 0x05
+                           000004   503 	ar4 = 0x04
+                           000003   504 	ar3 = 0x03
+                           000002   505 	ar2 = 0x02
+                           000001   506 	ar1 = 0x01
+                           000000   507 	ar0 = 0x00
+      0000A1 AE 82            [24]  508 	mov	r6,dpl
+      0000A3 AF 83            [24]  509 	mov	r7,dph
+                           000004   510 	C$RomPattern.c$32$1_0$2 ==.
+                                    511 ;	RomPattern.c:32: while(ms--);             /* So 1000 / 11.89uS = 91 for 1 msec */
+      0000A5                        512 00101$:
+      0000A5 8E 04            [24]  513 	mov	ar4,r6
+      0000A7 8F 05            [24]  514 	mov	ar5,r7
+      0000A9 1E               [12]  515 	dec	r6
+      0000AA BE FF 01         [24]  516 	cjne	r6,#0xff,00110$
+      0000AD 1F               [12]  517 	dec	r7
+      0000AE                        518 00110$:
+      0000AE EC               [12]  519 	mov	a,r4
+      0000AF 4D               [12]  520 	orl	a,r5
+      0000B0 70 F3            [24]  521 	jnz	00101$
+                           000011   522 	C$RomPattern.c$33$1_0$2 ==.
+                                    523 ;	RomPattern.c:33: }          
+                           000011   524 	C$RomPattern.c$33$1_0$2 ==.
+                           000011   525 	XG$delay$0$0 ==.
+      0000B2 22               [24]  526 	ret
+                                    527 ;------------------------------------------------------------
+                                    528 ;Allocation info for local variables in function 'Download_Array'
+                                    529 ;------------------------------------------------------------
+                           000012   530 	G$Download_Array$0$0 ==.
+                           000012   531 	C$RomPattern.c$34$1_0$4 ==.
+                                    532 ;	RomPattern.c:34: void Download_Array(void)
+                                    533 ;	-----------------------------------------
+                                    534 ;	 function Download_Array
+                                    535 ;	-----------------------------------------
+      0000B3                        536 _Download_Array:
+                           000012   537 	C$RomPattern.c$36$1_0$4 ==.
+                                    538 ;	RomPattern.c:36: x=0;		     /* Start using x = 0 */		
+      0000B3 75 44 00         [24]  539 	mov	_x,#0x00
+                           000015   540 	C$RomPattern.c$37$2_0$5 ==.
+                                    541 ;	RomPattern.c:37: for(x= 0;x < 8;x++)   /* For Loop 8 Times for 8 byte array */
+      0000B6 75 44 00         [24]  542 	mov	_x,#0x00
+      0000B9                        543 00115$:
+      0000B9 74 F8            [12]  544 	mov	a,#0x100 - 0x08
+      0000BB 25 44            [12]  545 	add	a,_x
+      0000BD 50 03            [24]  546 	jnc	00151$
+      0000BF 02 01 84         [24]  547 	ljmp	00117$
+      0000C2                        548 00151$:
+                           000021   549 	C$RomPattern.c$40$3_0$6 ==.
+                                    550 ;	RomPattern.c:40: if(mode == 0) patternData = *Address1++;
+      0000C2 E5 42            [12]  551 	mov	a,_mode
+      0000C4 70 19            [24]  552 	jnz	00102$
+      0000C6 AD 08            [24]  553 	mov	r5,_Address1
+      0000C8 AE 09            [24]  554 	mov	r6,(_Address1 + 1)
+      0000CA AF 0A            [24]  555 	mov	r7,(_Address1 + 2)
+      0000CC 8D 82            [24]  556 	mov	dpl,r5
+      0000CE 8E 83            [24]  557 	mov	dph,r6
+      0000D0 8F F0            [24]  558 	mov	b,r7
+      0000D2 12 01 F3         [24]  559 	lcall	__gptrget
+      0000D5 F5 40            [12]  560 	mov	_patternData,a
+      0000D7 05 08            [12]  561 	inc	_Address1
+      0000D9 E4               [12]  562 	clr	a
+      0000DA B5 08 02         [24]  563 	cjne	a,_Address1,00153$
+      0000DD 05 09            [12]  564 	inc	(_Address1 + 1)
+      0000DF                        565 00153$:
+      0000DF                        566 00102$:
+                           00003E   567 	C$RomPattern.c$41$3_0$6 ==.
+                                    568 ;	RomPattern.c:41: if(mode == 1) patternData = *Address2++;
+      0000DF 74 01            [12]  569 	mov	a,#0x01
+      0000E1 B5 42 19         [24]  570 	cjne	a,_mode,00104$
+      0000E4 AD 0B            [24]  571 	mov	r5,_Address2
+      0000E6 AE 0C            [24]  572 	mov	r6,(_Address2 + 1)
+      0000E8 AF 0D            [24]  573 	mov	r7,(_Address2 + 2)
+      0000EA 8D 82            [24]  574 	mov	dpl,r5
+      0000EC 8E 83            [24]  575 	mov	dph,r6
+      0000EE 8F F0            [24]  576 	mov	b,r7
+      0000F0 12 01 F3         [24]  577 	lcall	__gptrget
+      0000F3 F5 40            [12]  578 	mov	_patternData,a
+      0000F5 05 0B            [12]  579 	inc	_Address2
+      0000F7 E4               [12]  580 	clr	a
+      0000F8 B5 0B 02         [24]  581 	cjne	a,_Address2,00156$
+      0000FB 05 0C            [12]  582 	inc	(_Address2 + 1)
+      0000FD                        583 00156$:
+      0000FD                        584 00104$:
+                           00005C   585 	C$RomPattern.c$42$3_0$6 ==.
+                                    586 ;	RomPattern.c:42: if(mode == 2) patternData = *Address3++;
+      0000FD 74 02            [12]  587 	mov	a,#0x02
+      0000FF B5 42 19         [24]  588 	cjne	a,_mode,00106$
+      000102 AD 0E            [24]  589 	mov	r5,_Address3
+      000104 AE 0F            [24]  590 	mov	r6,(_Address3 + 1)
+      000106 AF 10            [24]  591 	mov	r7,(_Address3 + 2)
+      000108 8D 82            [24]  592 	mov	dpl,r5
+      00010A 8E 83            [24]  593 	mov	dph,r6
+      00010C 8F F0            [24]  594 	mov	b,r7
+      00010E 12 01 F3         [24]  595 	lcall	__gptrget
+      000111 F5 40            [12]  596 	mov	_patternData,a
+      000113 05 0E            [12]  597 	inc	_Address3
+      000115 E4               [12]  598 	clr	a
+      000116 B5 0E 02         [24]  599 	cjne	a,_Address3,00159$
+      000119 05 0F            [12]  600 	inc	(_Address3 + 1)
+      00011B                        601 00159$:
+      00011B                        602 00106$:
+                           00007A   603 	C$RomPattern.c$43$3_0$6 ==.
+                                    604 ;	RomPattern.c:43: if(mode == 3) patternData = *Address4++;
+      00011B 74 03            [12]  605 	mov	a,#0x03
+      00011D B5 42 19         [24]  606 	cjne	a,_mode,00108$
+      000120 AD 11            [24]  607 	mov	r5,_Address4
+      000122 AE 12            [24]  608 	mov	r6,(_Address4 + 1)
+      000124 AF 13            [24]  609 	mov	r7,(_Address4 + 2)
+      000126 8D 82            [24]  610 	mov	dpl,r5
+      000128 8E 83            [24]  611 	mov	dph,r6
+      00012A 8F F0            [24]  612 	mov	b,r7
+      00012C 12 01 F3         [24]  613 	lcall	__gptrget
+      00012F F5 40            [12]  614 	mov	_patternData,a
+      000131 05 11            [12]  615 	inc	_Address4
+      000133 E4               [12]  616 	clr	a
+      000134 B5 11 02         [24]  617 	cjne	a,_Address4,00162$
+      000137 05 12            [12]  618 	inc	(_Address4 + 1)
+      000139                        619 00162$:
+      000139                        620 00108$:
+                           000098   621 	C$RomPattern.c$44$3_0$6 ==.
+                                    622 ;	RomPattern.c:44: if(mode == 4) patternData = *Address5++;
+      000139 74 04            [12]  623 	mov	a,#0x04
+      00013B B5 42 19         [24]  624 	cjne	a,_mode,00110$
+      00013E AD 14            [24]  625 	mov	r5,_Address5
+      000140 AE 15            [24]  626 	mov	r6,(_Address5 + 1)
+      000142 AF 16            [24]  627 	mov	r7,(_Address5 + 2)
+      000144 8D 82            [24]  628 	mov	dpl,r5
+      000146 8E 83            [24]  629 	mov	dph,r6
+      000148 8F F0            [24]  630 	mov	b,r7
+      00014A 12 01 F3         [24]  631 	lcall	__gptrget
+      00014D F5 40            [12]  632 	mov	_patternData,a
+      00014F 05 14            [12]  633 	inc	_Address5
+      000151 E4               [12]  634 	clr	a
+      000152 B5 14 02         [24]  635 	cjne	a,_Address5,00165$
+      000155 05 15            [12]  636 	inc	(_Address5 + 1)
+      000157                        637 00165$:
+      000157                        638 00110$:
+                           0000B6   639 	C$RomPattern.c$45$3_0$6 ==.
+                                    640 ;	RomPattern.c:45: if(mode == 5) patternData = *Address6++;
+      000157 74 05            [12]  641 	mov	a,#0x05
+      000159 B5 42 19         [24]  642 	cjne	a,_mode,00112$
+      00015C AD 17            [24]  643 	mov	r5,_Address6
+      00015E AE 18            [24]  644 	mov	r6,(_Address6 + 1)
+      000160 AF 19            [24]  645 	mov	r7,(_Address6 + 2)
+      000162 8D 82            [24]  646 	mov	dpl,r5
+      000164 8E 83            [24]  647 	mov	dph,r6
+      000166 8F F0            [24]  648 	mov	b,r7
+      000168 12 01 F3         [24]  649 	lcall	__gptrget
+      00016B F5 40            [12]  650 	mov	_patternData,a
+      00016D 05 17            [12]  651 	inc	_Address6
+      00016F E4               [12]  652 	clr	a
+      000170 B5 17 02         [24]  653 	cjne	a,_Address6,00168$
+      000173 05 18            [12]  654 	inc	(_Address6 + 1)
+      000175                        655 00168$:
+      000175                        656 00112$:
+                           0000D4   657 	C$RomPattern.c$46$3_0$6 ==.
+                                    658 ;	RomPattern.c:46: RamPattern[x]= patternData; /* Now DownLoad The Next Data To Ram Array */ 
+      000175 E5 44            [12]  659 	mov	a,_x
+      000177 24 1D            [12]  660 	add	a,#_RamPattern
+      000179 F8               [12]  661 	mov	r0,a
+      00017A A6 40            [24]  662 	mov	@r0,_patternData
+                           0000DB   663 	C$RomPattern.c$37$2_0$5 ==.
+                                    664 ;	RomPattern.c:37: for(x= 0;x < 8;x++)   /* For Loop 8 Times for 8 byte array */
+      00017C E5 44            [12]  665 	mov	a,_x
+      00017E 04               [12]  666 	inc	a
+      00017F F5 44            [12]  667 	mov	_x,a
+      000181 02 00 B9         [24]  668 	ljmp	00115$
+      000184                        669 00117$:
+                           0000E3   670 	C$RomPattern.c$50$2_0$4 ==.
+                                    671 ;	RomPattern.c:50: }
+                           0000E3   672 	C$RomPattern.c$50$2_0$4 ==.
+                           0000E3   673 	XG$Download_Array$0$0 ==.
+      000184 22               [24]  674 	ret
+                                    675 ;------------------------------------------------------------
+                                    676 ;Allocation info for local variables in function 'button'
+                                    677 ;------------------------------------------------------------
+                           0000E4   678 	G$button$0$0 ==.
+                           0000E4   679 	C$RomPattern.c$51$2_0$8 ==.
+                                    680 ;	RomPattern.c:51: char button(void)
+                                    681 ;	-----------------------------------------
+                                    682 ;	 function button
+                                    683 ;	-----------------------------------------
+      000185                        684 _button:
+                           0000E4   685 	C$RomPattern.c$53$1_0$8 ==.
+                                    686 ;	RomPattern.c:53: if(P0_0) return 0;
+      000185 30 80 05         [24]  687 	jnb	_P0_0,00102$
+      000188 75 82 00         [24]  688 	mov	dpl,#0x00
+      00018B 80 1B            [24]  689 	sjmp	00105$
+      00018D                        690 00102$:
+                           0000EC   691 	C$RomPattern.c$54$1_0$8 ==.
+                                    692 ;	RomPattern.c:54: delay(1); 
+      00018D 90 00 01         [24]  693 	mov	dptr,#0x0001
+      000190 12 00 A1         [24]  694 	lcall	_delay
+                           0000F2   695 	C$RomPattern.c$55$1_0$8 ==.
+                                    696 ;	RomPattern.c:55: Download_Array();
+      000193 12 00 B3         [24]  697 	lcall	_Download_Array
+                           0000F5   698 	C$RomPattern.c$56$1_0$8 ==.
+                                    699 ;	RomPattern.c:56: if(++mode == 6) mode = 0;
+      000196 E5 42            [12]  700 	mov	a,_mode
+      000198 04               [12]  701 	inc	a
+      000199 FF               [12]  702 	mov	r7,a
+      00019A 8F 42            [24]  703 	mov	_mode,r7
+      00019C BF 06 03         [24]  704 	cjne	r7,#0x06,00104$
+      00019F 75 42 00         [24]  705 	mov	_mode,#0x00
+      0001A2                        706 00104$:
+                           000101   707 	C$RomPattern.c$57$1_0$8 ==.
+                                    708 ;	RomPattern.c:57: P2 = mode;
+      0001A2 85 42 A0         [24]  709 	mov	_P2,_mode
+                           000104   710 	C$RomPattern.c$58$1_0$8 ==.
+                                    711 ;	RomPattern.c:58: return 1;
+      0001A5 75 82 01         [24]  712 	mov	dpl,#0x01
+      0001A8                        713 00105$:
+                           000107   714 	C$RomPattern.c$59$1_0$8 ==.
+                                    715 ;	RomPattern.c:59: }
+                           000107   716 	C$RomPattern.c$59$1_0$8 ==.
+                           000107   717 	XG$button$0$0 ==.
+      0001A8 22               [24]  718 	ret
+                                    719 ;------------------------------------------------------------
+                                    720 ;Allocation info for local variables in function 'main'
+                                    721 ;------------------------------------------------------------
+                           000108   722 	G$main$0$0 ==.
+                           000108   723 	C$RomPattern.c$61$1_0$10 ==.
+                                    724 ;	RomPattern.c:61: void main(void)         /* Main entry point */
+                                    725 ;	-----------------------------------------
+                                    726 ;	 function main
+                                    727 ;	-----------------------------------------
+      0001A9                        728 _main:
+                           000108   729 	C$RomPattern.c$63$1_0$10 ==.
+                                    730 ;	RomPattern.c:63: SP = 0x60;
+      0001A9 75 81 60         [24]  731 	mov	_SP,#0x60
+                           00010B   732 	C$RomPattern.c$64$1_0$10 ==.
+                                    733 ;	RomPattern.c:64: mode = 1;
+      0001AC 75 42 01         [24]  734 	mov	_mode,#0x01
+                           00010E   735 	C$RomPattern.c$65$1_0$10 ==.
+                                    736 ;	RomPattern.c:65: modePtr = &mode;	         /* modePtr now have the address of mode not the data value */
+      0001AF 75 43 42         [24]  737 	mov	_modePtr,#_mode
+                           000111   738 	C$RomPattern.c$66$1_0$10 ==.
+                                    739 ;	RomPattern.c:66: patternData = *Address1;	 /* patternPtr now have also the First array Address */ 
+      0001B2 AD 08            [24]  740 	mov	r5,_Address1
+      0001B4 AE 09            [24]  741 	mov	r6,(_Address1 + 1)
+      0001B6 AF 0A            [24]  742 	mov	r7,(_Address1 + 2)
+      0001B8 8D 82            [24]  743 	mov	dpl,r5
+      0001BA 8E 83            [24]  744 	mov	dph,r6
+      0001BC 8F F0            [24]  745 	mov	b,r7
+      0001BE 12 01 F3         [24]  746 	lcall	__gptrget
+      0001C1 F5 40            [12]  747 	mov	_patternData,a
+                           000122   748 	C$RomPattern.c$67$1_0$10 ==.
+                                    749 ;	RomPattern.c:67: Download_Array();		 /* Download the data from ROM memory to RAM Array */
+      0001C3 12 00 B3         [24]  750 	lcall	_Download_Array
+                           000125   751 	C$RomPattern.c$68$1_0$10 ==.
+                                    752 ;	RomPattern.c:68: RamPatternPtr = &RamPattern[0];
+      0001C6 75 45 1D         [24]  753 	mov	_RamPatternPtr,#_RamPattern
+                           000128   754 	C$RomPattern.c$69$1_0$10 ==.
+                                    755 ;	RomPattern.c:69: while(1)                     /* Forever loop */
+      0001C9                        756 00105$:
+                           000128   757 	C$RomPattern.c$71$3_0$12 ==.
+                                    758 ;	RomPattern.c:71: for(x=0;x<8;x++)	 /* Loop 8 Times for 8 byte Array */
+      0001C9 75 44 00         [24]  759 	mov	_x,#0x00
+      0001CC                        760 00108$:
+      0001CC 74 F8            [12]  761 	mov	a,#0x100 - 0x08
+      0001CE 25 44            [12]  762 	add	a,_x
+      0001D0 40 F7            [24]  763 	jc	00105$
+                           000131   764 	C$RomPattern.c$73$4_0$13 ==.
+                                    765 ;	RomPattern.c:73: P1 = ~RamPattern[x]; 	/* Complement the Data and Display it */    
+      0001D2 E5 44            [12]  766 	mov	a,_x
+      0001D4 24 1D            [12]  767 	add	a,#_RamPattern
+      0001D6 F9               [12]  768 	mov	r1,a
+      0001D7 E7               [12]  769 	mov	a,@r1
+      0001D8 F4               [12]  770 	cpl	a
+      0001D9 F5 90            [12]  771 	mov	_P1,a
+                           00013A   772 	C$RomPattern.c$74$4_0$13 ==.
+                                    773 ;	RomPattern.c:74: delay(5);        		/* To see LED's */
+      0001DB 90 00 05         [24]  774 	mov	dptr,#0x0005
+      0001DE 12 00 A1         [24]  775 	lcall	_delay
+                           000140   776 	C$RomPattern.c$75$4_0$13 ==.
+                                    777 ;	RomPattern.c:75: if(button()) x = 0;         /* Check button */
+      0001E1 12 01 85         [24]  778 	lcall	_button
+      0001E4 E5 82            [12]  779 	mov	a,dpl
+      0001E6 60 03            [24]  780 	jz	00109$
+      0001E8 75 44 00         [24]  781 	mov	_x,#0x00
+      0001EB                        782 00109$:
+                           00014A   783 	C$RomPattern.c$71$3_0$12 ==.
+                                    784 ;	RomPattern.c:71: for(x=0;x<8;x++)	 /* Loop 8 Times for 8 byte Array */
+      0001EB E5 44            [12]  785 	mov	a,_x
+      0001ED 04               [12]  786 	inc	a
+      0001EE F5 44            [12]  787 	mov	_x,a
+      0001F0 80 DA            [24]  788 	sjmp	00108$
+                           000151   789 	C$RomPattern.c$78$1_0$10 ==.
+                                    790 ;	RomPattern.c:78: }
+                           000151   791 	C$RomPattern.c$78$1_0$10 ==.
+                           000151   792 	XG$main$0$0 ==.
+      0001F2 22               [24]  793 	ret
+                                    794 	.area CSEG    (CODE)
+                                    795 	.area CONST   (CODE)
+                           000000   796 G$Pattern1$0_0$0 == .
+      000213                        797 _Pattern1:
+      000213 80                     798 	.db #0x80	; 128
+      000214 40                     799 	.db #0x40	; 64
+      000215 20                     800 	.db #0x20	; 32
+      000216 10                     801 	.db #0x10	; 16
+      000217 08                     802 	.db #0x08	; 8
+      000218 04                     803 	.db #0x04	; 4
+      000219 02                     804 	.db #0x02	; 2
+      00021A 01                     805 	.db #0x01	; 1
+                           000008   806 G$Pattern2$0_0$0 == .
+      00021B                        807 _Pattern2:
+      00021B 01                     808 	.db #0x01	; 1
+      00021C 02                     809 	.db #0x02	; 2
+      00021D 04                     810 	.db #0x04	; 4
+      00021E 08                     811 	.db #0x08	; 8
+      00021F 10                     812 	.db #0x10	; 16
+      000220 20                     813 	.db #0x20	; 32
+      000221 40                     814 	.db #0x40	; 64
+      000222 80                     815 	.db #0x80	; 128
+                           000010   816 G$Pattern3$0_0$0 == .
+      000223                        817 _Pattern3:
+      000223 81                     818 	.db #0x81	; 129
+      000224 42                     819 	.db #0x42	; 66	'B'
+      000225 24                     820 	.db #0x24	; 36
+      000226 18                     821 	.db #0x18	; 24
+      000227 18                     822 	.db #0x18	; 24
+      000228 24                     823 	.db #0x24	; 36
+      000229 42                     824 	.db #0x42	; 66	'B'
+      00022A 81                     825 	.db #0x81	; 129
+                           000018   826 G$Pattern4$0_0$0 == .
+      00022B                        827 _Pattern4:
+      00022B 18                     828 	.db #0x18	; 24
+      00022C 24                     829 	.db #0x24	; 36
+      00022D 42                     830 	.db #0x42	; 66	'B'
+      00022E 81                     831 	.db #0x81	; 129
+      00022F 81                     832 	.db #0x81	; 129
+      000230 42                     833 	.db #0x42	; 66	'B'
+      000231 24                     834 	.db #0x24	; 36
+      000232 18                     835 	.db #0x18	; 24
+                           000020   836 G$Pattern5$0_0$0 == .
+      000233                        837 _Pattern5:
+      000233 A0                     838 	.db #0xa0	; 160
+      000234 50                     839 	.db #0x50	; 80	'P'
+      000235 28                     840 	.db #0x28	; 40
+      000236 14                     841 	.db #0x14	; 20
+      000237 0A                     842 	.db #0x0a	; 10
+      000238 05                     843 	.db #0x05	; 5
+      000239 02                     844 	.db #0x02	; 2
+      00023A 01                     845 	.db #0x01	; 1
+                           000028   846 G$Pattern6$0_0$0 == .
+      00023B                        847 _Pattern6:
+      00023B 01                     848 	.db #0x01	; 1
+      00023C 02                     849 	.db #0x02	; 2
+      00023D 05                     850 	.db #0x05	; 5
+      00023E 0A                     851 	.db #0x0a	; 10
+      00023F 14                     852 	.db #0x14	; 20
+      000240 28                     853 	.db #0x28	; 40
+      000241 50                     854 	.db #0x50	; 80	'P'
+      000242 A0                     855 	.db #0xa0	; 160
+                                    856 	.area XINIT   (CODE)
+                                    857 	.area CABS    (ABS,CODE)

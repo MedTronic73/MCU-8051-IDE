@@ -1,0 +1,6 @@
+# Watches definition file -- MCU 8051 IDE v1.4.9
+  40 mode
+  41 modeadress
+  42 x
+  30 patternPtr
+  90 P1

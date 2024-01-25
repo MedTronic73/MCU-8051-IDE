@@ -1,0 +1,786 @@
+ASxxxx Linker V03.00 + NoICE + sdld,  page 1.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CABS                                00000000    00000000 =           0. bytes (ABS,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000000  l_BIT_BANK                      
+C:   00000000  l_BSEG                          
+C:   00000000  l_BSEG_BYTES                    
+C:   00000000  l_CABS                          
+C:   00000000  l_GSINIT1                       
+C:   00000000  l_GSINIT5                       
+C:   00000000  l_IABS                          
+C:   00000000  l_ISEG                          
+C:   00000000  l_OSEG                          
+C:   00000000  l_PSEG                          
+C:   00000000  l_REG_BANK_1                    
+C:   00000000  l_REG_BANK_2                    
+C:   00000000  l_REG_BANK_3                    
+C:   00000000  l_RSEG                          
+C:   00000000  l_RSEG0                         
+C:   00000000  l_RSEG1                         
+C:   00000000  l_XABS                          
+C:   00000000  l_XINIT                         
+C:   00000000  l_XISEG                         
+C:   00000000  l_XSEG                          
+C:   00000000  l__CODE                         
+C:   00000000  s_BSEG                          
+C:   00000000  s_CABS                          
+C:   00000000  s_DSEG                          
+C:   00000000  s_HOME                          
+C:   00000000  s_IABS                          
+C:   00000000  s_ISEG                          
+C:   00000000  s_REG_BANK_0                    
+C:   00000000  s_RSEG                          
+C:   00000000  s_RSEG0                         
+C:   00000000  s_RSEG1                         
+C:   00000000  s_XABS                          
+C:   00000001  s_PSEG                          
+C:   00000001  s_XISEG                         
+C:   00000001  s_XSEG                          
+C:   00000003  l_GSFINAL                       
+C:   00000003  l_GSINIT0                       
+C:   00000006  l_HOME                          
+C:   00000006  s_GSINIT0                       
+C:   00000008  l_REG_BANK_0                    
+C:   00000008  s_REG_BANK_1                    
+C:   00000009  s_GSINIT1                       
+C:   00000009  s_GSINIT2                       
+C:   0000000A  l_GSINIT2                       
+C:   00000010  s_REG_BANK_2                    
+C:   00000013  s_GSINIT3                       
+C:   00000018  s_BIT_BANK                      
+C:   00000018  s_OSEG                          
+C:   00000018  s_REG_BANK_3                    
+C:   00000020  s_BSEG_BYTES                    
+ASxxxx Linker V03.00 + NoICE + sdld,  page 2.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CABS                                00000000    00000000 =           0. bytes (ABS,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000020  s__CODE                         
+C:   00000022  l_GSINIT3                       
+C:   00000025  s_SSEG                          
+C:   0000002A  l_GSINIT4                       
+C:   00000030  l_CONST                         
+C:   00000035  s_GSINIT4                       
+C:   0000003F  l_GSINIT                        
+C:   0000005F  s_GSINIT                        
+C:   0000005F  s_GSINIT5                       
+C:   00000080  l_DSEG                          
+C:   0000009E  s_GSFINAL                       
+C:   000000A1  s_CSEG                          
+C:   000000DB  l_SSEG                          
+C:   00000100  l_IRAM                          
+C:   00000172  l_CSEG                          
+C:   00000213  s_CONST                         
+C:   00000243  s_XINIT                         
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 3.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000000  .__.ABS.                           _startup
+     00000040  G$patternData$0_0$0                RomPattern
+     00000040  _patternData                       RomPattern
+     00000042  FRomPattern$mode$0_0$0             RomPattern
+     00000043  FRomPattern$modePtr$0_0$0          RomPattern
+     00000044  FRomPattern$x$0_0$0                RomPattern
+     00000045  FRomPattern$RamPatternPtr$0_0$0    RomPattern
+     00000080  G$P0$0_0$0                         RomPattern
+     00000080  G$P0_0$0_0$0                       RomPattern
+     00000080  _P0                                RomPattern
+     00000080  _P0_0                              RomPattern
+     00000081  G$P0_1$0_0$0                       RomPattern
+     00000081  G$SP$0_0$0                         RomPattern
+     00000081  _P0_1                              RomPattern
+     00000081  _SP                                RomPattern
+     00000082  G$DPL$0_0$0                        RomPattern
+     00000082  G$P0_2$0_0$0                       RomPattern
+     00000082  _DPL                               RomPattern
+     00000082  _P0_2                              RomPattern
+     00000083  G$DPH$0_0$0                        RomPattern
+     00000083  G$P0_3$0_0$0                       RomPattern
+     00000083  _DPH                               RomPattern
+     00000083  _P0_3                              RomPattern
+     00000084  G$P0_4$0_0$0                       RomPattern
+     00000084  _P0_4                              RomPattern
+     00000085  G$P0_5$0_0$0                       RomPattern
+     00000085  _P0_5                              RomPattern
+     00000086  G$P0_6$0_0$0                       RomPattern
+     00000086  _P0_6                              RomPattern
+     00000087  G$P0_7$0_0$0                       RomPattern
+     00000087  G$PCON$0_0$0                       RomPattern
+     00000087  _P0_7                              RomPattern
+     00000087  _PCON                              RomPattern
+     00000088  G$IT0$0_0$0                        RomPattern
+     00000088  G$TCON$0_0$0                       RomPattern
+     00000088  _IT0                               RomPattern
+     00000088  _TCON                              RomPattern
+     00000089  G$IE0$0_0$0                        RomPattern
+     00000089  G$TMOD$0_0$0                       RomPattern
+     00000089  _IE0                               RomPattern
+     00000089  _TMOD                              RomPattern
+     0000008A  G$IT1$0_0$0                        RomPattern
+     0000008A  G$TL0$0_0$0                        RomPattern
+     0000008A  _IT1                               RomPattern
+     0000008A  _TL0                               RomPattern
+     0000008B  G$IE1$0_0$0                        RomPattern
+     0000008B  G$TL1$0_0$0                        RomPattern
+     0000008B  _IE1                               RomPattern
+     0000008B  _TL1                               RomPattern
+     0000008C  G$TH0$0_0$0                        RomPattern
+ASxxxx Linker V03.00 + NoICE + sdld,  page 4.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000008C  G$TR0$0_0$0                        RomPattern
+     0000008C  _TH0                               RomPattern
+     0000008C  _TR0                               RomPattern
+     0000008D  G$TF0$0_0$0                        RomPattern
+     0000008D  G$TH1$0_0$0                        RomPattern
+     0000008D  _TF0                               RomPattern
+     0000008D  _TH1                               RomPattern
+     0000008E  G$TR1$0_0$0                        RomPattern
+     0000008E  _TR1                               RomPattern
+     0000008F  G$TF1$0_0$0                        RomPattern
+     0000008F  _TF1                               RomPattern
+     00000090  G$P1$0_0$0                         RomPattern
+     00000090  G$P1_0$0_0$0                       RomPattern
+     00000090  _P1                                RomPattern
+     00000090  _P1_0                              RomPattern
+     00000091  G$P1_1$0_0$0                       RomPattern
+     00000091  _P1_1                              RomPattern
+     00000092  G$P1_2$0_0$0                       RomPattern
+     00000092  _P1_2                              RomPattern
+     00000093  G$P1_3$0_0$0                       RomPattern
+     00000093  _P1_3                              RomPattern
+     00000094  G$P1_4$0_0$0                       RomPattern
+     00000094  _P1_4                              RomPattern
+     00000095  G$P1_5$0_0$0                       RomPattern
+     00000095  _P1_5                              RomPattern
+     00000096  G$P1_6$0_0$0                       RomPattern
+     00000096  _P1_6                              RomPattern
+     00000097  G$P1_7$0_0$0                       RomPattern
+     00000097  _P1_7                              RomPattern
+     00000098  G$RI$0_0$0                         RomPattern
+     00000098  G$SCON$0_0$0                       RomPattern
+     00000098  _RI                                RomPattern
+     00000098  _SCON                              RomPattern
+     00000099  G$SBUF$0_0$0                       RomPattern
+     00000099  G$TI$0_0$0                         RomPattern
+     00000099  _SBUF                              RomPattern
+     00000099  _TI                                RomPattern
+     0000009A  G$RB8$0_0$0                        RomPattern
+     0000009A  _RB8                               RomPattern
+     0000009B  G$TB8$0_0$0                        RomPattern
+     0000009B  _TB8                               RomPattern
+     0000009C  G$REN$0_0$0                        RomPattern
+     0000009C  _REN                               RomPattern
+     0000009D  G$SM2$0_0$0                        RomPattern
+     0000009D  _SM2                               RomPattern
+     0000009E  G$SM1$0_0$0                        RomPattern
+     0000009E  _SM1                               RomPattern
+     0000009F  G$SM0$0_0$0                        RomPattern
+     0000009F  _SM0                               RomPattern
+     000000A0  G$P2$0_0$0                         RomPattern
+     000000A0  G$P2_0$0_0$0                       RomPattern
+ASxxxx Linker V03.00 + NoICE + sdld,  page 5.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000A0  _P2                                RomPattern
+     000000A0  _P2_0                              RomPattern
+     000000A0  __XPAGE                            
+     000000A1  G$P2_1$0_0$0                       RomPattern
+     000000A1  _P2_1                              RomPattern
+     000000A2  G$P2_2$0_0$0                       RomPattern
+     000000A2  _P2_2                              RomPattern
+     000000A3  G$P2_3$0_0$0                       RomPattern
+     000000A3  _P2_3                              RomPattern
+     000000A4  G$P2_4$0_0$0                       RomPattern
+     000000A4  _P2_4                              RomPattern
+     000000A5  G$P2_5$0_0$0                       RomPattern
+     000000A5  _P2_5                              RomPattern
+     000000A6  G$P2_6$0_0$0                       RomPattern
+     000000A6  _P2_6                              RomPattern
+     000000A7  G$P2_7$0_0$0                       RomPattern
+     000000A7  _P2_7                              RomPattern
+     000000A8  G$EX0$0_0$0                        RomPattern
+     000000A8  G$IE$0_0$0                         RomPattern
+     000000A8  _EX0                               RomPattern
+     000000A8  _IE                                RomPattern
+     000000A9  G$ET0$0_0$0                        RomPattern
+     000000A9  _ET0                               RomPattern
+     000000AA  G$EX1$0_0$0                        RomPattern
+     000000AA  _EX1                               RomPattern
+     000000AB  G$ET1$0_0$0                        RomPattern
+     000000AB  _ET1                               RomPattern
+     000000AC  G$ES$0_0$0                         RomPattern
+     000000AC  _ES                                RomPattern
+     000000AF  G$EA$0_0$0                         RomPattern
+     000000AF  _EA                                RomPattern
+     000000B0  G$P3$0_0$0                         RomPattern
+     000000B0  G$P3_0$0_0$0                       RomPattern
+     000000B0  G$RXD$0_0$0                        RomPattern
+     000000B0  _P3                                RomPattern
+     000000B0  _P3_0                              RomPattern
+     000000B0  _RXD                               RomPattern
+     000000B1  G$P3_1$0_0$0                       RomPattern
+     000000B1  G$TXD$0_0$0                        RomPattern
+     000000B1  _P3_1                              RomPattern
+     000000B1  _TXD                               RomPattern
+     000000B2  G$INT0$0_0$0                       RomPattern
+     000000B2  G$P3_2$0_0$0                       RomPattern
+     000000B2  _INT0                              RomPattern
+     000000B2  _P3_2                              RomPattern
+     000000B3  G$INT1$0_0$0                       RomPattern
+     000000B3  G$P3_3$0_0$0                       RomPattern
+     000000B3  _INT1                              RomPattern
+     000000B3  _P3_3                              RomPattern
+     000000B4  G$P3_4$0_0$0                       RomPattern
+     000000B4  G$T0$0_0$0                         RomPattern
+ASxxxx Linker V03.00 + NoICE + sdld,  page 6.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000B4  _P3_4                              RomPattern
+     000000B4  _T0                                RomPattern
+     000000B5  G$P3_5$0_0$0                       RomPattern
+     000000B5  G$T1$0_0$0                         RomPattern
+     000000B5  _P3_5                              RomPattern
+     000000B5  _T1                                RomPattern
+     000000B6  G$P3_6$0_0$0                       RomPattern
+     000000B6  G$WR$0_0$0                         RomPattern
+     000000B6  _P3_6                              RomPattern
+     000000B6  _WR                                RomPattern
+     000000B7  G$P3_7$0_0$0                       RomPattern
+     000000B7  G$RD$0_0$0                         RomPattern
+     000000B7  _P3_7                              RomPattern
+     000000B7  _RD                                RomPattern
+     000000B8  G$IP$0_0$0                         RomPattern
+     000000B8  G$PX0$0_0$0                        RomPattern
+     000000B8  _IP                                RomPattern
+     000000B8  _PX0                               RomPattern
+     000000B9  G$PT0$0_0$0                        RomPattern
+     000000B9  _PT0                               RomPattern
+     000000BA  G$PX1$0_0$0                        RomPattern
+     000000BA  _PX1                               RomPattern
+     000000BB  G$PT1$0_0$0                        RomPattern
+     000000BB  _PT1                               RomPattern
+     000000BC  G$PS$0_0$0                         RomPattern
+     000000BC  _PS                                RomPattern
+     000000D0  G$P$0_0$0                          RomPattern
+     000000D0  G$PSW$0_0$0                        RomPattern
+     000000D0  _P                                 RomPattern
+     000000D0  _PSW                               RomPattern
+     000000D1  G$F1$0_0$0                         RomPattern
+     000000D1  _F1                                RomPattern
+     000000D2  G$OV$0_0$0                         RomPattern
+     000000D2  _OV                                RomPattern
+     000000D3  G$RS0$0_0$0                        RomPattern
+     000000D3  _RS0                               RomPattern
+     000000D4  G$RS1$0_0$0                        RomPattern
+     000000D4  _RS1                               RomPattern
+     000000D5  G$F0$0_0$0                         RomPattern
+     000000D5  _F0                                RomPattern
+     000000D6  G$AC$0_0$0                         RomPattern
+     000000D6  _AC                                RomPattern
+     000000D7  G$CY$0_0$0                         RomPattern
+     000000D7  _CY                                RomPattern
+     000000E0  G$ACC$0_0$0                        RomPattern
+     000000E0  _ACC                               RomPattern
+     000000F0  G$B$0_0$0                          RomPattern
+     000000F0  _B                                 RomPattern
+     000000F5  _B_5                               _gptrget
+     000000F6  _B_6                               _gptrget
+     000000F7  _B_7                               _gptrget
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 7.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+REG_BANK_0                          00000000    00000008 =           8. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 8.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+DSEG                                00000000    00000080 =         128. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000008  G$Address1$0_0$0                   RomPattern
+     00000008  _Address1                          RomPattern
+     0000000B  G$Address2$0_0$0                   RomPattern
+     0000000B  _Address2                          RomPattern
+     0000000E  G$Address3$0_0$0                   RomPattern
+     0000000E  _Address3                          RomPattern
+     00000011  G$Address4$0_0$0                   RomPattern
+     00000011  _Address4                          RomPattern
+     00000014  G$Address5$0_0$0                   RomPattern
+     00000014  _Address5                          RomPattern
+     00000017  G$Address6$0_0$0                   RomPattern
+     00000017  _Address6                          RomPattern
+     0000001A  G$patternAddress$0_0$0             RomPattern
+     0000001A  _patternAddress                    RomPattern
+     0000001D  G$RamPattern$0_0$0                 RomPattern
+     0000001D  _RamPattern                        RomPattern
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 9.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+SSEG                                00000025    000000DB =         219. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000025  __start__stack                     RomPattern
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 10.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+HOME                                00000000    00000006 =           6. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000000  A$RomPattern$425                   RomPattern
+C:   00000003  A$RomPattern$482                   RomPattern
+C:   00000003  __sdcc_program_startup             RomPattern
+ASxxxx Linker V03.00 + NoICE + sdld,  page 11.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT0                             00000006    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000006  __sdcc_gsinit_startup              
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 12.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT2                             00000009    0000000A =          10. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 13.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT3                             00000013    00000022 =          34. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000013  __mcs51_genXINIT                   
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 14.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT4                             00000035    0000002A =          42. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000035  __mcs51_genRAMCLEAR                
+C:   0000003B  __mcs51_genXRAMCLEAR               
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 15.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT                              0000005F    0000003F =          63. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000005F  A$RomPattern$441                   RomPattern
+C:   0000005F  C$RomPattern.c$10$1_0$10           RomPattern
+C:   00000062  A$RomPattern$442                   RomPattern
+C:   00000065  A$RomPattern$443                   RomPattern
+C:   00000068  A$RomPattern$446                   RomPattern
+C:   00000068  C$RomPattern.c$11$1_0$10           RomPattern
+C:   0000006B  A$RomPattern$447                   RomPattern
+C:   0000006E  A$RomPattern$448                   RomPattern
+C:   00000071  A$RomPattern$451                   RomPattern
+C:   00000071  C$RomPattern.c$12$1_0$10           RomPattern
+C:   00000074  A$RomPattern$452                   RomPattern
+C:   00000077  A$RomPattern$453                   RomPattern
+C:   0000007A  A$RomPattern$456                   RomPattern
+C:   0000007A  C$RomPattern.c$13$1_0$10           RomPattern
+C:   0000007D  A$RomPattern$457                   RomPattern
+C:   00000080  A$RomPattern$458                   RomPattern
+C:   00000083  A$RomPattern$461                   RomPattern
+C:   00000083  C$RomPattern.c$14$1_0$10           RomPattern
+C:   00000086  A$RomPattern$462                   RomPattern
+C:   00000089  A$RomPattern$463                   RomPattern
+C:   0000008C  A$RomPattern$466                   RomPattern
+C:   0000008C  C$RomPattern.c$15$1_0$10           RomPattern
+C:   0000008F  A$RomPattern$467                   RomPattern
+C:   00000092  A$RomPattern$468                   RomPattern
+C:   00000095  A$RomPattern$471                   RomPattern
+C:   00000095  C$RomPattern.c$17$1_0$10           RomPattern
+C:   00000098  A$RomPattern$472                   RomPattern
+C:   0000009B  A$RomPattern$473                   RomPattern
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 16.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSFINAL                             0000009E    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000009E  A$RomPattern$475                   RomPattern
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 17.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000A1    00000172 =         370. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000000A1  A$RomPattern$508                   RomPattern
+C:   000000A1  C$RomPattern.c$29$0_0$2            RomPattern
+C:   000000A1  G$delay$0$0                        RomPattern
+C:   000000A1  _delay                             RomPattern
+C:   000000A3  A$RomPattern$509                   RomPattern
+C:   000000A5  A$RomPattern$513                   RomPattern
+C:   000000A5  C$RomPattern.c$32$1_0$2            RomPattern
+C:   000000A7  A$RomPattern$514                   RomPattern
+C:   000000A9  A$RomPattern$515                   RomPattern
+C:   000000AA  A$RomPattern$516                   RomPattern
+C:   000000AD  A$RomPattern$517                   RomPattern
+C:   000000AE  A$RomPattern$519                   RomPattern
+C:   000000AF  A$RomPattern$520                   RomPattern
+C:   000000B0  A$RomPattern$521                   RomPattern
+C:   000000B2  A$RomPattern$526                   RomPattern
+C:   000000B2  C$RomPattern.c$33$1_0$2            RomPattern
+C:   000000B2  XG$delay$0$0                       RomPattern
+C:   000000B3  A$RomPattern$539                   RomPattern
+C:   000000B3  C$RomPattern.c$34$1_0$4            RomPattern
+C:   000000B3  C$RomPattern.c$36$1_0$4            RomPattern
+C:   000000B3  G$Download_Array$0$0               RomPattern
+C:   000000B3  _Download_Array                    RomPattern
+C:   000000B6  A$RomPattern$542                   RomPattern
+C:   000000B9  A$RomPattern$544                   RomPattern
+C:   000000BB  A$RomPattern$545                   RomPattern
+C:   000000BD  A$RomPattern$546                   RomPattern
+C:   000000BF  A$RomPattern$547                   RomPattern
+C:   000000C2  A$RomPattern$551                   RomPattern
+C:   000000C2  C$RomPattern.c$40$3_0$6            RomPattern
+C:   000000C4  A$RomPattern$552                   RomPattern
+C:   000000C6  A$RomPattern$553                   RomPattern
+C:   000000C8  A$RomPattern$554                   RomPattern
+C:   000000CA  A$RomPattern$555                   RomPattern
+C:   000000CC  A$RomPattern$556                   RomPattern
+C:   000000CE  A$RomPattern$557                   RomPattern
+C:   000000D0  A$RomPattern$558                   RomPattern
+C:   000000D2  A$RomPattern$559                   RomPattern
+C:   000000D5  A$RomPattern$560                   RomPattern
+C:   000000D7  A$RomPattern$561                   RomPattern
+C:   000000D9  A$RomPattern$562                   RomPattern
+C:   000000DA  A$RomPattern$563                   RomPattern
+C:   000000DD  A$RomPattern$564                   RomPattern
+C:   000000DF  A$RomPattern$569                   RomPattern
+C:   000000DF  C$RomPattern.c$41$3_0$6            RomPattern
+C:   000000E1  A$RomPattern$570                   RomPattern
+C:   000000E4  A$RomPattern$571                   RomPattern
+C:   000000E6  A$RomPattern$572                   RomPattern
+C:   000000E8  A$RomPattern$573                   RomPattern
+C:   000000EA  A$RomPattern$574                   RomPattern
+C:   000000EC  A$RomPattern$575                   RomPattern
+ASxxxx Linker V03.00 + NoICE + sdld,  page 18.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000A1    00000172 =         370. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000000EE  A$RomPattern$576                   RomPattern
+C:   000000F0  A$RomPattern$577                   RomPattern
+C:   000000F3  A$RomPattern$578                   RomPattern
+C:   000000F5  A$RomPattern$579                   RomPattern
+C:   000000F7  A$RomPattern$580                   RomPattern
+C:   000000F8  A$RomPattern$581                   RomPattern
+C:   000000FB  A$RomPattern$582                   RomPattern
+C:   000000FD  A$RomPattern$587                   RomPattern
+C:   000000FD  C$RomPattern.c$42$3_0$6            RomPattern
+C:   000000FF  A$RomPattern$588                   RomPattern
+C:   00000102  A$RomPattern$589                   RomPattern
+C:   00000104  A$RomPattern$590                   RomPattern
+C:   00000106  A$RomPattern$591                   RomPattern
+C:   00000108  A$RomPattern$592                   RomPattern
+C:   0000010A  A$RomPattern$593                   RomPattern
+C:   0000010C  A$RomPattern$594                   RomPattern
+C:   0000010E  A$RomPattern$595                   RomPattern
+C:   00000111  A$RomPattern$596                   RomPattern
+C:   00000113  A$RomPattern$597                   RomPattern
+C:   00000115  A$RomPattern$598                   RomPattern
+C:   00000116  A$RomPattern$599                   RomPattern
+C:   00000119  A$RomPattern$600                   RomPattern
+C:   0000011B  A$RomPattern$605                   RomPattern
+C:   0000011B  C$RomPattern.c$43$3_0$6            RomPattern
+C:   0000011D  A$RomPattern$606                   RomPattern
+C:   00000120  A$RomPattern$607                   RomPattern
+C:   00000122  A$RomPattern$608                   RomPattern
+C:   00000124  A$RomPattern$609                   RomPattern
+C:   00000126  A$RomPattern$610                   RomPattern
+C:   00000128  A$RomPattern$611                   RomPattern
+C:   0000012A  A$RomPattern$612                   RomPattern
+C:   0000012C  A$RomPattern$613                   RomPattern
+C:   0000012F  A$RomPattern$614                   RomPattern
+C:   00000131  A$RomPattern$615                   RomPattern
+C:   00000133  A$RomPattern$616                   RomPattern
+C:   00000134  A$RomPattern$617                   RomPattern
+C:   00000137  A$RomPattern$618                   RomPattern
+C:   00000139  A$RomPattern$623                   RomPattern
+C:   00000139  C$RomPattern.c$44$3_0$6            RomPattern
+C:   0000013B  A$RomPattern$624                   RomPattern
+C:   0000013E  A$RomPattern$625                   RomPattern
+C:   00000140  A$RomPattern$626                   RomPattern
+C:   00000142  A$RomPattern$627                   RomPattern
+C:   00000144  A$RomPattern$628                   RomPattern
+C:   00000146  A$RomPattern$629                   RomPattern
+C:   00000148  A$RomPattern$630                   RomPattern
+C:   0000014A  A$RomPattern$631                   RomPattern
+C:   0000014D  A$RomPattern$632                   RomPattern
+C:   0000014F  A$RomPattern$633                   RomPattern
+C:   00000151  A$RomPattern$634                   RomPattern
+C:   00000152  A$RomPattern$635                   RomPattern
+ASxxxx Linker V03.00 + NoICE + sdld,  page 19.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000A1    00000172 =         370. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000155  A$RomPattern$636                   RomPattern
+C:   00000157  A$RomPattern$641                   RomPattern
+C:   00000157  C$RomPattern.c$45$3_0$6            RomPattern
+C:   00000159  A$RomPattern$642                   RomPattern
+C:   0000015C  A$RomPattern$643                   RomPattern
+C:   0000015E  A$RomPattern$644                   RomPattern
+C:   00000160  A$RomPattern$645                   RomPattern
+C:   00000162  A$RomPattern$646                   RomPattern
+C:   00000164  A$RomPattern$647                   RomPattern
+C:   00000166  A$RomPattern$648                   RomPattern
+C:   00000168  A$RomPattern$649                   RomPattern
+C:   0000016B  A$RomPattern$650                   RomPattern
+C:   0000016D  A$RomPattern$651                   RomPattern
+C:   0000016F  A$RomPattern$652                   RomPattern
+C:   00000170  A$RomPattern$653                   RomPattern
+C:   00000173  A$RomPattern$654                   RomPattern
+C:   00000175  A$RomPattern$659                   RomPattern
+C:   00000175  C$RomPattern.c$46$3_0$6            RomPattern
+C:   00000177  A$RomPattern$660                   RomPattern
+C:   00000179  A$RomPattern$661                   RomPattern
+C:   0000017A  A$RomPattern$662                   RomPattern
+C:   0000017C  A$RomPattern$665                   RomPattern
+C:   0000017C  C$RomPattern.c$37$2_0$5            RomPattern
+C:   0000017E  A$RomPattern$666                   RomPattern
+C:   0000017F  A$RomPattern$667                   RomPattern
+C:   00000181  A$RomPattern$668                   RomPattern
+C:   00000184  A$RomPattern$674                   RomPattern
+C:   00000184  C$RomPattern.c$50$2_0$4            RomPattern
+C:   00000184  XG$Download_Array$0$0              RomPattern
+C:   00000185  A$RomPattern$687                   RomPattern
+C:   00000185  C$RomPattern.c$51$2_0$8            RomPattern
+C:   00000185  C$RomPattern.c$53$1_0$8            RomPattern
+C:   00000185  G$button$0$0                       RomPattern
+C:   00000185  _button                            RomPattern
+C:   00000188  A$RomPattern$688                   RomPattern
+C:   0000018B  A$RomPattern$689                   RomPattern
+C:   0000018D  A$RomPattern$693                   RomPattern
+C:   0000018D  C$RomPattern.c$54$1_0$8            RomPattern
+C:   00000190  A$RomPattern$694                   RomPattern
+C:   00000193  A$RomPattern$697                   RomPattern
+C:   00000193  C$RomPattern.c$55$1_0$8            RomPattern
+C:   00000196  A$RomPattern$700                   RomPattern
+C:   00000196  C$RomPattern.c$56$1_0$8            RomPattern
+C:   00000198  A$RomPattern$701                   RomPattern
+C:   00000199  A$RomPattern$702                   RomPattern
+C:   0000019A  A$RomPattern$703                   RomPattern
+C:   0000019C  A$RomPattern$704                   RomPattern
+C:   0000019F  A$RomPattern$705                   RomPattern
+C:   000001A2  A$RomPattern$709                   RomPattern
+C:   000001A2  C$RomPattern.c$57$1_0$8            RomPattern
+C:   000001A5  A$RomPattern$712                   RomPattern
+ASxxxx Linker V03.00 + NoICE + sdld,  page 20.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000A1    00000172 =         370. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000001A5  C$RomPattern.c$58$1_0$8            RomPattern
+C:   000001A8  A$RomPattern$718                   RomPattern
+C:   000001A8  C$RomPattern.c$59$1_0$8            RomPattern
+C:   000001A8  XG$button$0$0                      RomPattern
+C:   000001A9  A$RomPattern$731                   RomPattern
+C:   000001A9  C$RomPattern.c$61$1_0$10           RomPattern
+C:   000001A9  C$RomPattern.c$63$1_0$10           RomPattern
+C:   000001A9  G$main$0$0                         RomPattern
+C:   000001A9  _main                              RomPattern
+C:   000001AC  A$RomPattern$734                   RomPattern
+C:   000001AC  C$RomPattern.c$64$1_0$10           RomPattern
+C:   000001AF  A$RomPattern$737                   RomPattern
+C:   000001AF  C$RomPattern.c$65$1_0$10           RomPattern
+C:   000001B2  A$RomPattern$740                   RomPattern
+C:   000001B2  C$RomPattern.c$66$1_0$10           RomPattern
+C:   000001B4  A$RomPattern$741                   RomPattern
+C:   000001B6  A$RomPattern$742                   RomPattern
+C:   000001B8  A$RomPattern$743                   RomPattern
+C:   000001BA  A$RomPattern$744                   RomPattern
+C:   000001BC  A$RomPattern$745                   RomPattern
+C:   000001BE  A$RomPattern$746                   RomPattern
+C:   000001C1  A$RomPattern$747                   RomPattern
+C:   000001C3  A$RomPattern$750                   RomPattern
+C:   000001C3  C$RomPattern.c$67$1_0$10           RomPattern
+C:   000001C6  A$RomPattern$753                   RomPattern
+C:   000001C6  C$RomPattern.c$68$1_0$10           RomPattern
+C:   000001C9  A$RomPattern$759                   RomPattern
+C:   000001C9  C$RomPattern.c$69$1_0$10           RomPattern
+C:   000001CC  A$RomPattern$761                   RomPattern
+C:   000001CE  A$RomPattern$762                   RomPattern
+C:   000001D0  A$RomPattern$763                   RomPattern
+C:   000001D2  A$RomPattern$766                   RomPattern
+C:   000001D2  C$RomPattern.c$73$4_0$13           RomPattern
+C:   000001D4  A$RomPattern$767                   RomPattern
+C:   000001D6  A$RomPattern$768                   RomPattern
+C:   000001D7  A$RomPattern$769                   RomPattern
+C:   000001D8  A$RomPattern$770                   RomPattern
+C:   000001D9  A$RomPattern$771                   RomPattern
+C:   000001DB  A$RomPattern$774                   RomPattern
+C:   000001DB  C$RomPattern.c$74$4_0$13           RomPattern
+C:   000001DE  A$RomPattern$775                   RomPattern
+C:   000001E1  A$RomPattern$778                   RomPattern
+C:   000001E1  C$RomPattern.c$75$4_0$13           RomPattern
+C:   000001E4  A$RomPattern$779                   RomPattern
+C:   000001E6  A$RomPattern$780                   RomPattern
+C:   000001E8  A$RomPattern$781                   RomPattern
+C:   000001EB  A$RomPattern$785                   RomPattern
+C:   000001EB  C$RomPattern.c$71$3_0$12           RomPattern
+C:   000001ED  A$RomPattern$786                   RomPattern
+C:   000001EE  A$RomPattern$787                   RomPattern
+C:   000001F0  A$RomPattern$788                   RomPattern
+ASxxxx Linker V03.00 + NoICE + sdld,  page 21.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000A1    00000172 =         370. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000001F2  A$RomPattern$793                   RomPattern
+C:   000001F2  C$RomPattern.c$78$1_0$10           RomPattern
+C:   000001F2  XG$main$0$0                        RomPattern
+C:   000001F3  __gptrget                          _gptrget
+C:   0000020F  __sdcc_external_startup            _startup
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 22.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CONST                               00000213    00000030 =          48. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000213  G$Pattern1$0_0$0                   RomPattern
+C:   00000213  _Pattern1                          RomPattern
+C:   0000021B  G$Pattern2$0_0$0                   RomPattern
+C:   0000021B  _Pattern2                          RomPattern
+C:   00000223  G$Pattern3$0_0$0                   RomPattern
+C:   00000223  _Pattern3                          RomPattern
+C:   0000022B  G$Pattern4$0_0$0                   RomPattern
+C:   0000022B  _Pattern4                          RomPattern
+C:   00000233  G$Pattern5$0_0$0                   RomPattern
+C:   00000233  _Pattern5                          RomPattern
+C:   0000023B  G$Pattern6$0_0$0                   RomPattern
+C:   0000023B  _Pattern6                          RomPattern
+ASxxxx Linker V03.00 + NoICE + sdld,  page 23.
+
+Files Linked                              [ module(s) ]
+
+RomPattern.rel                            [  ]
+
+
+Libraries Linked                          [ object file ]
+
+C:\Program Files\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtclear.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtxinit.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtxclear.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtpagesfr.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtstart.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/libsdcc.lib
+                                          [ _gptrget.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/libsdcc.lib
+                                          [ _startup.rel ]
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 24.
+
+User Base Address Definitions
+
+HOME = 0x0000
+XSEG = 0x0001
+PSEG = 0x0001
+ISEG = 0x0000
+BSEG = 0x0000
+
+

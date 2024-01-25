@@ -1,0 +1,603 @@
+                                      1 ;--------------------------------------------------------
+                                      2 ; File Created by SDCC : free open source ANSI-C Compiler
+                                      3 ; Version 4.2.0 #13081 (MINGW32)
+                                      4 ;--------------------------------------------------------
+                                      5 	.module Function_Return
+                                      6 	.optsdcc -mmcs51 --model-small
+                                      7 	
+                                      8 ;--------------------------------------------------------
+                                      9 ; Public variables in this module
+                                     10 ;--------------------------------------------------------
+                                     11 	.globl _main
+                                     12 	.globl _CY
+                                     13 	.globl _AC
+                                     14 	.globl _F0
+                                     15 	.globl _RS1
+                                     16 	.globl _RS0
+                                     17 	.globl _OV
+                                     18 	.globl _FL
+                                     19 	.globl _P
+                                     20 	.globl _PS
+                                     21 	.globl _PT1
+                                     22 	.globl _PX1
+                                     23 	.globl _PT0
+                                     24 	.globl _PX0
+                                     25 	.globl _RD
+                                     26 	.globl _WR
+                                     27 	.globl _T1
+                                     28 	.globl _T0
+                                     29 	.globl _INT1
+                                     30 	.globl _INT0
+                                     31 	.globl _TXD
+                                     32 	.globl _RXD
+                                     33 	.globl _P3_7
+                                     34 	.globl _P3_6
+                                     35 	.globl _P3_5
+                                     36 	.globl _P3_4
+                                     37 	.globl _P3_3
+                                     38 	.globl _P3_2
+                                     39 	.globl _P3_1
+                                     40 	.globl _P3_0
+                                     41 	.globl _EA
+                                     42 	.globl _ES
+                                     43 	.globl _ET1
+                                     44 	.globl _EX1
+                                     45 	.globl _ET0
+                                     46 	.globl _EX0
+                                     47 	.globl _P2_7
+                                     48 	.globl _P2_6
+                                     49 	.globl _P2_5
+                                     50 	.globl _P2_4
+                                     51 	.globl _P2_3
+                                     52 	.globl _P2_2
+                                     53 	.globl _P2_1
+                                     54 	.globl _P2_0
+                                     55 	.globl _SM0
+                                     56 	.globl _SM1
+                                     57 	.globl _SM2
+                                     58 	.globl _REN
+                                     59 	.globl _TB8
+                                     60 	.globl _RB8
+                                     61 	.globl _TI
+                                     62 	.globl _RI
+                                     63 	.globl _P1_7
+                                     64 	.globl _P1_6
+                                     65 	.globl _P1_5
+                                     66 	.globl _P1_4
+                                     67 	.globl _P1_3
+                                     68 	.globl _P1_2
+                                     69 	.globl _P1_1
+                                     70 	.globl _P1_0
+                                     71 	.globl _TF1
+                                     72 	.globl _TR1
+                                     73 	.globl _TF0
+                                     74 	.globl _TR0
+                                     75 	.globl _IE1
+                                     76 	.globl _IT1
+                                     77 	.globl _IE0
+                                     78 	.globl _IT0
+                                     79 	.globl _P0_7
+                                     80 	.globl _P0_6
+                                     81 	.globl _P0_5
+                                     82 	.globl _P0_4
+                                     83 	.globl _P0_3
+                                     84 	.globl _P0_2
+                                     85 	.globl _P0_1
+                                     86 	.globl _P0_0
+                                     87 	.globl _B
+                                     88 	.globl _A
+                                     89 	.globl _ACC
+                                     90 	.globl _PSW
+                                     91 	.globl _IP
+                                     92 	.globl _P3
+                                     93 	.globl _IE
+                                     94 	.globl _P2
+                                     95 	.globl _SBUF
+                                     96 	.globl _SCON
+                                     97 	.globl _P1
+                                     98 	.globl _TH1
+                                     99 	.globl _TH0
+                                    100 	.globl _TL1
+                                    101 	.globl _TL0
+                                    102 	.globl _TMOD
+                                    103 	.globl _TCON
+                                    104 	.globl _PCON
+                                    105 	.globl _DPH
+                                    106 	.globl _DPL
+                                    107 	.globl _SP
+                                    108 	.globl _P0
+                                    109 	.globl _sum_For_PARM_2
+                                    110 	.globl _sum_Do_PARM_2
+                                    111 	.globl _sum_while_PARM_2
+                                    112 	.globl _sum_while
+                                    113 	.globl _sum_Do
+                                    114 	.globl _sum_For
+                                    115 ;--------------------------------------------------------
+                                    116 ; special function registers
+                                    117 ;--------------------------------------------------------
+                                    118 	.area RSEG    (ABS,DATA)
+      000000                        119 	.org 0x0000
+                           000080   120 G$P0$0_0$0 == 0x0080
+                           000080   121 _P0	=	0x0080
+                           000081   122 G$SP$0_0$0 == 0x0081
+                           000081   123 _SP	=	0x0081
+                           000082   124 G$DPL$0_0$0 == 0x0082
+                           000082   125 _DPL	=	0x0082
+                           000083   126 G$DPH$0_0$0 == 0x0083
+                           000083   127 _DPH	=	0x0083
+                           000087   128 G$PCON$0_0$0 == 0x0087
+                           000087   129 _PCON	=	0x0087
+                           000088   130 G$TCON$0_0$0 == 0x0088
+                           000088   131 _TCON	=	0x0088
+                           000089   132 G$TMOD$0_0$0 == 0x0089
+                           000089   133 _TMOD	=	0x0089
+                           00008A   134 G$TL0$0_0$0 == 0x008a
+                           00008A   135 _TL0	=	0x008a
+                           00008B   136 G$TL1$0_0$0 == 0x008b
+                           00008B   137 _TL1	=	0x008b
+                           00008C   138 G$TH0$0_0$0 == 0x008c
+                           00008C   139 _TH0	=	0x008c
+                           00008D   140 G$TH1$0_0$0 == 0x008d
+                           00008D   141 _TH1	=	0x008d
+                           000090   142 G$P1$0_0$0 == 0x0090
+                           000090   143 _P1	=	0x0090
+                           000098   144 G$SCON$0_0$0 == 0x0098
+                           000098   145 _SCON	=	0x0098
+                           000099   146 G$SBUF$0_0$0 == 0x0099
+                           000099   147 _SBUF	=	0x0099
+                           0000A0   148 G$P2$0_0$0 == 0x00a0
+                           0000A0   149 _P2	=	0x00a0
+                           0000A8   150 G$IE$0_0$0 == 0x00a8
+                           0000A8   151 _IE	=	0x00a8
+                           0000B0   152 G$P3$0_0$0 == 0x00b0
+                           0000B0   153 _P3	=	0x00b0
+                           0000B8   154 G$IP$0_0$0 == 0x00b8
+                           0000B8   155 _IP	=	0x00b8
+                           0000D0   156 G$PSW$0_0$0 == 0x00d0
+                           0000D0   157 _PSW	=	0x00d0
+                           0000E0   158 G$ACC$0_0$0 == 0x00e0
+                           0000E0   159 _ACC	=	0x00e0
+                           0000E0   160 G$A$0_0$0 == 0x00e0
+                           0000E0   161 _A	=	0x00e0
+                           0000F0   162 G$B$0_0$0 == 0x00f0
+                           0000F0   163 _B	=	0x00f0
+                                    164 ;--------------------------------------------------------
+                                    165 ; special function bits
+                                    166 ;--------------------------------------------------------
+                                    167 	.area RSEG    (ABS,DATA)
+      000000                        168 	.org 0x0000
+                           000080   169 G$P0_0$0_0$0 == 0x0080
+                           000080   170 _P0_0	=	0x0080
+                           000081   171 G$P0_1$0_0$0 == 0x0081
+                           000081   172 _P0_1	=	0x0081
+                           000082   173 G$P0_2$0_0$0 == 0x0082
+                           000082   174 _P0_2	=	0x0082
+                           000083   175 G$P0_3$0_0$0 == 0x0083
+                           000083   176 _P0_3	=	0x0083
+                           000084   177 G$P0_4$0_0$0 == 0x0084
+                           000084   178 _P0_4	=	0x0084
+                           000085   179 G$P0_5$0_0$0 == 0x0085
+                           000085   180 _P0_5	=	0x0085
+                           000086   181 G$P0_6$0_0$0 == 0x0086
+                           000086   182 _P0_6	=	0x0086
+                           000087   183 G$P0_7$0_0$0 == 0x0087
+                           000087   184 _P0_7	=	0x0087
+                           000088   185 G$IT0$0_0$0 == 0x0088
+                           000088   186 _IT0	=	0x0088
+                           000089   187 G$IE0$0_0$0 == 0x0089
+                           000089   188 _IE0	=	0x0089
+                           00008A   189 G$IT1$0_0$0 == 0x008a
+                           00008A   190 _IT1	=	0x008a
+                           00008B   191 G$IE1$0_0$0 == 0x008b
+                           00008B   192 _IE1	=	0x008b
+                           00008C   193 G$TR0$0_0$0 == 0x008c
+                           00008C   194 _TR0	=	0x008c
+                           00008D   195 G$TF0$0_0$0 == 0x008d
+                           00008D   196 _TF0	=	0x008d
+                           00008E   197 G$TR1$0_0$0 == 0x008e
+                           00008E   198 _TR1	=	0x008e
+                           00008F   199 G$TF1$0_0$0 == 0x008f
+                           00008F   200 _TF1	=	0x008f
+                           000090   201 G$P1_0$0_0$0 == 0x0090
+                           000090   202 _P1_0	=	0x0090
+                           000091   203 G$P1_1$0_0$0 == 0x0091
+                           000091   204 _P1_1	=	0x0091
+                           000092   205 G$P1_2$0_0$0 == 0x0092
+                           000092   206 _P1_2	=	0x0092
+                           000093   207 G$P1_3$0_0$0 == 0x0093
+                           000093   208 _P1_3	=	0x0093
+                           000094   209 G$P1_4$0_0$0 == 0x0094
+                           000094   210 _P1_4	=	0x0094
+                           000095   211 G$P1_5$0_0$0 == 0x0095
+                           000095   212 _P1_5	=	0x0095
+                           000096   213 G$P1_6$0_0$0 == 0x0096
+                           000096   214 _P1_6	=	0x0096
+                           000097   215 G$P1_7$0_0$0 == 0x0097
+                           000097   216 _P1_7	=	0x0097
+                           000098   217 G$RI$0_0$0 == 0x0098
+                           000098   218 _RI	=	0x0098
+                           000099   219 G$TI$0_0$0 == 0x0099
+                           000099   220 _TI	=	0x0099
+                           00009A   221 G$RB8$0_0$0 == 0x009a
+                           00009A   222 _RB8	=	0x009a
+                           00009B   223 G$TB8$0_0$0 == 0x009b
+                           00009B   224 _TB8	=	0x009b
+                           00009C   225 G$REN$0_0$0 == 0x009c
+                           00009C   226 _REN	=	0x009c
+                           00009D   227 G$SM2$0_0$0 == 0x009d
+                           00009D   228 _SM2	=	0x009d
+                           00009E   229 G$SM1$0_0$0 == 0x009e
+                           00009E   230 _SM1	=	0x009e
+                           00009F   231 G$SM0$0_0$0 == 0x009f
+                           00009F   232 _SM0	=	0x009f
+                           0000A0   233 G$P2_0$0_0$0 == 0x00a0
+                           0000A0   234 _P2_0	=	0x00a0
+                           0000A1   235 G$P2_1$0_0$0 == 0x00a1
+                           0000A1   236 _P2_1	=	0x00a1
+                           0000A2   237 G$P2_2$0_0$0 == 0x00a2
+                           0000A2   238 _P2_2	=	0x00a2
+                           0000A3   239 G$P2_3$0_0$0 == 0x00a3
+                           0000A3   240 _P2_3	=	0x00a3
+                           0000A4   241 G$P2_4$0_0$0 == 0x00a4
+                           0000A4   242 _P2_4	=	0x00a4
+                           0000A5   243 G$P2_5$0_0$0 == 0x00a5
+                           0000A5   244 _P2_5	=	0x00a5
+                           0000A6   245 G$P2_6$0_0$0 == 0x00a6
+                           0000A6   246 _P2_6	=	0x00a6
+                           0000A7   247 G$P2_7$0_0$0 == 0x00a7
+                           0000A7   248 _P2_7	=	0x00a7
+                           0000A8   249 G$EX0$0_0$0 == 0x00a8
+                           0000A8   250 _EX0	=	0x00a8
+                           0000A9   251 G$ET0$0_0$0 == 0x00a9
+                           0000A9   252 _ET0	=	0x00a9
+                           0000AA   253 G$EX1$0_0$0 == 0x00aa
+                           0000AA   254 _EX1	=	0x00aa
+                           0000AB   255 G$ET1$0_0$0 == 0x00ab
+                           0000AB   256 _ET1	=	0x00ab
+                           0000AC   257 G$ES$0_0$0 == 0x00ac
+                           0000AC   258 _ES	=	0x00ac
+                           0000AF   259 G$EA$0_0$0 == 0x00af
+                           0000AF   260 _EA	=	0x00af
+                           0000B0   261 G$P3_0$0_0$0 == 0x00b0
+                           0000B0   262 _P3_0	=	0x00b0
+                           0000B1   263 G$P3_1$0_0$0 == 0x00b1
+                           0000B1   264 _P3_1	=	0x00b1
+                           0000B2   265 G$P3_2$0_0$0 == 0x00b2
+                           0000B2   266 _P3_2	=	0x00b2
+                           0000B3   267 G$P3_3$0_0$0 == 0x00b3
+                           0000B3   268 _P3_3	=	0x00b3
+                           0000B4   269 G$P3_4$0_0$0 == 0x00b4
+                           0000B4   270 _P3_4	=	0x00b4
+                           0000B5   271 G$P3_5$0_0$0 == 0x00b5
+                           0000B5   272 _P3_5	=	0x00b5
+                           0000B6   273 G$P3_6$0_0$0 == 0x00b6
+                           0000B6   274 _P3_6	=	0x00b6
+                           0000B7   275 G$P3_7$0_0$0 == 0x00b7
+                           0000B7   276 _P3_7	=	0x00b7
+                           0000B0   277 G$RXD$0_0$0 == 0x00b0
+                           0000B0   278 _RXD	=	0x00b0
+                           0000B1   279 G$TXD$0_0$0 == 0x00b1
+                           0000B1   280 _TXD	=	0x00b1
+                           0000B2   281 G$INT0$0_0$0 == 0x00b2
+                           0000B2   282 _INT0	=	0x00b2
+                           0000B3   283 G$INT1$0_0$0 == 0x00b3
+                           0000B3   284 _INT1	=	0x00b3
+                           0000B4   285 G$T0$0_0$0 == 0x00b4
+                           0000B4   286 _T0	=	0x00b4
+                           0000B5   287 G$T1$0_0$0 == 0x00b5
+                           0000B5   288 _T1	=	0x00b5
+                           0000B6   289 G$WR$0_0$0 == 0x00b6
+                           0000B6   290 _WR	=	0x00b6
+                           0000B7   291 G$RD$0_0$0 == 0x00b7
+                           0000B7   292 _RD	=	0x00b7
+                           0000B8   293 G$PX0$0_0$0 == 0x00b8
+                           0000B8   294 _PX0	=	0x00b8
+                           0000B9   295 G$PT0$0_0$0 == 0x00b9
+                           0000B9   296 _PT0	=	0x00b9
+                           0000BA   297 G$PX1$0_0$0 == 0x00ba
+                           0000BA   298 _PX1	=	0x00ba
+                           0000BB   299 G$PT1$0_0$0 == 0x00bb
+                           0000BB   300 _PT1	=	0x00bb
+                           0000BC   301 G$PS$0_0$0 == 0x00bc
+                           0000BC   302 _PS	=	0x00bc
+                           0000D0   303 G$P$0_0$0 == 0x00d0
+                           0000D0   304 _P	=	0x00d0
+                           0000D1   305 G$FL$0_0$0 == 0x00d1
+                           0000D1   306 _FL	=	0x00d1
+                           0000D2   307 G$OV$0_0$0 == 0x00d2
+                           0000D2   308 _OV	=	0x00d2
+                           0000D3   309 G$RS0$0_0$0 == 0x00d3
+                           0000D3   310 _RS0	=	0x00d3
+                           0000D4   311 G$RS1$0_0$0 == 0x00d4
+                           0000D4   312 _RS1	=	0x00d4
+                           0000D5   313 G$F0$0_0$0 == 0x00d5
+                           0000D5   314 _F0	=	0x00d5
+                           0000D6   315 G$AC$0_0$0 == 0x00d6
+                           0000D6   316 _AC	=	0x00d6
+                           0000D7   317 G$CY$0_0$0 == 0x00d7
+                           0000D7   318 _CY	=	0x00d7
+                                    319 ;--------------------------------------------------------
+                                    320 ; overlayable register banks
+                                    321 ;--------------------------------------------------------
+                                    322 	.area REG_BANK_0	(REL,OVR,DATA)
+      000000                        323 	.ds 8
+                                    324 ;--------------------------------------------------------
+                                    325 ; internal ram data
+                                    326 ;--------------------------------------------------------
+                                    327 	.area DSEG    (DATA)
+                           000000   328 LFunction_Return.sum_while$i$1_0$6==.
+      000008                        329 _sum_while_PARM_2:
+      000008                        330 	.ds 1
+                           000001   331 LFunction_Return.sum_Do$i$1_0$9==.
+      000009                        332 _sum_Do_PARM_2:
+      000009                        333 	.ds 1
+                           000002   334 LFunction_Return.sum_For$i$1_0$12==.
+      00000A                        335 _sum_For_PARM_2:
+      00000A                        336 	.ds 1
+                                    337 ;--------------------------------------------------------
+                                    338 ; overlayable items in internal ram
+                                    339 ;--------------------------------------------------------
+                                    340 ;--------------------------------------------------------
+                                    341 ; Stack segment in internal ram
+                                    342 ;--------------------------------------------------------
+                                    343 	.area	SSEG
+      00000B                        344 __start__stack:
+      00000B                        345 	.ds	1
+                                    346 
+                                    347 ;--------------------------------------------------------
+                                    348 ; indirectly addressable internal ram data
+                                    349 ;--------------------------------------------------------
+                                    350 	.area ISEG    (DATA)
+                                    351 ;--------------------------------------------------------
+                                    352 ; absolute internal ram data
+                                    353 ;--------------------------------------------------------
+                                    354 	.area IABS    (ABS,DATA)
+                                    355 	.area IABS    (ABS,DATA)
+                                    356 ;--------------------------------------------------------
+                                    357 ; bit data
+                                    358 ;--------------------------------------------------------
+                                    359 	.area BSEG    (BIT)
+                                    360 ;--------------------------------------------------------
+                                    361 ; paged external ram data
+                                    362 ;--------------------------------------------------------
+                                    363 	.area PSEG    (PAG,XDATA)
+                                    364 ;--------------------------------------------------------
+                                    365 ; external ram data
+                                    366 ;--------------------------------------------------------
+                                    367 	.area XSEG    (XDATA)
+                                    368 ;--------------------------------------------------------
+                                    369 ; absolute external ram data
+                                    370 ;--------------------------------------------------------
+                                    371 	.area XABS    (ABS,XDATA)
+                                    372 ;--------------------------------------------------------
+                                    373 ; external initialized ram data
+                                    374 ;--------------------------------------------------------
+                                    375 	.area XISEG   (XDATA)
+                                    376 	.area HOME    (CODE)
+                                    377 	.area GSINIT0 (CODE)
+                                    378 	.area GSINIT1 (CODE)
+                                    379 	.area GSINIT2 (CODE)
+                                    380 	.area GSINIT3 (CODE)
+                                    381 	.area GSINIT4 (CODE)
+                                    382 	.area GSINIT5 (CODE)
+                                    383 	.area GSINIT  (CODE)
+                                    384 	.area GSFINAL (CODE)
+                                    385 	.area CSEG    (CODE)
+                                    386 ;--------------------------------------------------------
+                                    387 ; interrupt vector
+                                    388 ;--------------------------------------------------------
+                                    389 	.area HOME    (CODE)
+      000000                        390 __interrupt_vect:
+      000000 02 00 06         [24]  391 	ljmp	__sdcc_gsinit_startup
+                                    392 ;--------------------------------------------------------
+                                    393 ; global & static initialisations
+                                    394 ;--------------------------------------------------------
+                                    395 	.area HOME    (CODE)
+                                    396 	.area GSINIT  (CODE)
+                                    397 	.area GSFINAL (CODE)
+                                    398 	.area GSINIT  (CODE)
+                                    399 	.globl __sdcc_gsinit_startup
+                                    400 	.globl __sdcc_program_startup
+                                    401 	.globl __start__stack
+                                    402 	.globl __mcs51_genXINIT
+                                    403 	.globl __mcs51_genXRAMCLEAR
+                                    404 	.globl __mcs51_genRAMCLEAR
+                                    405 	.area GSFINAL (CODE)
+      00005F 02 00 03         [24]  406 	ljmp	__sdcc_program_startup
+                                    407 ;--------------------------------------------------------
+                                    408 ; Home
+                                    409 ;--------------------------------------------------------
+                                    410 	.area HOME    (CODE)
+                                    411 	.area HOME    (CODE)
+      000003                        412 __sdcc_program_startup:
+      000003 02 00 62         [24]  413 	ljmp	_main
+                                    414 ;	return from main will return to caller
+                                    415 ;--------------------------------------------------------
+                                    416 ; code
+                                    417 ;--------------------------------------------------------
+                                    418 	.area CSEG    (CODE)
+                                    419 ;------------------------------------------------------------
+                                    420 ;Allocation info for local variables in function 'main'
+                                    421 ;------------------------------------------------------------
+                                    422 ;My_sum                    Allocated to registers 
+                                    423 ;My_Count                  Allocated to registers 
+                                    424 ;------------------------------------------------------------
+                           000000   425 	G$main$0$0 ==.
+                           000000   426 	C$Function_Return.c$18$0_0$5 ==.
+                                    427 ;	Function_Return.c:18: void main (void)			/* Main Function Body */
+                                    428 ;	-----------------------------------------
+                                    429 ;	 function main
+                                    430 ;	-----------------------------------------
+      000062                        431 _main:
+                           000007   432 	ar7 = 0x07
+                           000006   433 	ar6 = 0x06
+                           000005   434 	ar5 = 0x05
+                           000004   435 	ar4 = 0x04
+                           000003   436 	ar3 = 0x03
+                           000002   437 	ar2 = 0x02
+                           000001   438 	ar1 = 0x01
+                           000000   439 	ar0 = 0x00
+                           000000   440 	C$Function_Return.c$22$1_0$5 ==.
+                                    441 ;	Function_Return.c:22: P1 = sum_For(My_sum,My_Count);			/* Third Function Call */
+      000062 75 0A 0A         [24]  442 	mov	_sum_For_PARM_2,#0x0a
+      000065 90 00 00         [24]  443 	mov	dptr,#0x0000
+      000068 12 00 C2         [24]  444 	lcall	_sum_For
+      00006B AE 82            [24]  445 	mov	r6,dpl
+      00006D 8E 90            [24]  446 	mov	_P1,r6
+                           00000D   447 	C$Function_Return.c$23$1_0$5 ==.
+                                    448 ;	Function_Return.c:23: P2 = sum_Do(My_sum,My_Count);			/* Secound Function Call */
+      00006F 75 09 0A         [24]  449 	mov	_sum_Do_PARM_2,#0x0a
+      000072 90 00 00         [24]  450 	mov	dptr,#0x0000
+      000075 12 00 A7         [24]  451 	lcall	_sum_Do
+      000078 AE 82            [24]  452 	mov	r6,dpl
+      00007A 8E A0            [24]  453 	mov	_P2,r6
+                           00001A   454 	C$Function_Return.c$24$1_0$5 ==.
+                                    455 ;	Function_Return.c:24: P3 = sum_while(My_sum,My_Count);		/* First Function Call */
+      00007C 75 08 0A         [24]  456 	mov	_sum_while_PARM_2,#0x0a
+      00007F 90 00 00         [24]  457 	mov	dptr,#0x0000
+      000082 12 00 8A         [24]  458 	lcall	_sum_while
+      000085 AE 82            [24]  459 	mov	r6,dpl
+      000087 8E B0            [24]  460 	mov	_P3,r6
+                           000027   461 	C$Function_Return.c$25$1_0$5 ==.
+                                    462 ;	Function_Return.c:25: }
+                           000027   463 	C$Function_Return.c$25$1_0$5 ==.
+                           000027   464 	XG$main$0$0 ==.
+      000089 22               [24]  465 	ret
+                                    466 ;------------------------------------------------------------
+                                    467 ;Allocation info for local variables in function 'sum_while'
+                                    468 ;------------------------------------------------------------
+                                    469 ;i                         Allocated with name '_sum_while_PARM_2'
+                                    470 ;sum                       Allocated to registers r6 r7 
+                                    471 ;------------------------------------------------------------
+                           000028   472 	G$sum_while$0$0 ==.
+                           000028   473 	C$Function_Return.c$27$1_0$7 ==.
+                                    474 ;	Function_Return.c:27: int sum_while(int sum , char i)   /* First Function Body */
+                                    475 ;	-----------------------------------------
+                                    476 ;	 function sum_while
+                                    477 ;	-----------------------------------------
+      00008A                        478 _sum_while:
+      00008A AE 82            [24]  479 	mov	r6,dpl
+      00008C AF 83            [24]  480 	mov	r7,dph
+                           00002C   481 	C$Function_Return.c$29$1_0$7 ==.
+                                    482 ;	Function_Return.c:29: while(i < 10)		  /* As i < 10 Loop then this function not run */
+      00008E                        483 00101$:
+      00008E 74 F6            [12]  484 	mov	a,#0x100 - 0x0a
+      000090 25 08            [12]  485 	add	a,_sum_while_PARM_2
+      000092 40 0E            [24]  486 	jc	00103$
+                           000032   487 	C$Function_Return.c$31$2_0$8 ==.
+                                    488 ;	Function_Return.c:31: sum += i;	  /* Accumlate sum */
+      000094 AC 08            [24]  489 	mov	r4,_sum_while_PARM_2
+      000096 7D 00            [12]  490 	mov	r5,#0x00
+      000098 EC               [12]  491 	mov	a,r4
+      000099 2E               [12]  492 	add	a,r6
+      00009A FE               [12]  493 	mov	r6,a
+      00009B ED               [12]  494 	mov	a,r5
+      00009C 3F               [12]  495 	addc	a,r7
+      00009D FF               [12]  496 	mov	r7,a
+                           00003C   497 	C$Function_Return.c$32$2_0$8 ==.
+                                    498 ;	Function_Return.c:32: i++ ;	  /* Increment i by 1 */
+      00009E 05 08            [12]  499 	inc	_sum_while_PARM_2
+      0000A0 80 EC            [24]  500 	sjmp	00101$
+      0000A2                        501 00103$:
+                           000040   502 	C$Function_Return.c$34$1_0$7 ==.
+                                    503 ;	Function_Return.c:34: return sum;		  /* Now we found it returns a 0 which is the argument */
+      0000A2 8E 82            [24]  504 	mov	dpl,r6
+      0000A4 8F 83            [24]  505 	mov	dph,r7
+                           000044   506 	C$Function_Return.c$35$1_0$7 ==.
+                                    507 ;	Function_Return.c:35: }
+                           000044   508 	C$Function_Return.c$35$1_0$7 ==.
+                           000044   509 	XG$sum_while$0$0 ==.
+      0000A6 22               [24]  510 	ret
+                                    511 ;------------------------------------------------------------
+                                    512 ;Allocation info for local variables in function 'sum_Do'
+                                    513 ;------------------------------------------------------------
+                                    514 ;i                         Allocated with name '_sum_Do_PARM_2'
+                                    515 ;sum                       Allocated to registers r6 r7 
+                                    516 ;------------------------------------------------------------
+                           000045   517 	G$sum_Do$0$0 ==.
+                           000045   518 	C$Function_Return.c$37$1_0$10 ==.
+                                    519 ;	Function_Return.c:37: int sum_Do(int sum , char i)	  /* Second Function Body */
+                                    520 ;	-----------------------------------------
+                                    521 ;	 function sum_Do
+                                    522 ;	-----------------------------------------
+      0000A7                        523 _sum_Do:
+      0000A7 AE 82            [24]  524 	mov	r6,dpl
+      0000A9 AF 83            [24]  525 	mov	r7,dph
+                           000049   526 	C$Function_Return.c$39$1_0$10 ==.
+                                    527 ;	Function_Return.c:39: do			  /* with do loop one time at least run even the */
+      0000AB                        528 00101$:
+                           000049   529 	C$Function_Return.c$41$2_0$11 ==.
+                                    530 ;	Function_Return.c:41: sum += i;	  /* Accumlate sum */
+      0000AB AC 09            [24]  531 	mov	r4,_sum_Do_PARM_2
+      0000AD 7D 00            [12]  532 	mov	r5,#0x00
+      0000AF EC               [12]  533 	mov	a,r4
+      0000B0 2E               [12]  534 	add	a,r6
+      0000B1 FE               [12]  535 	mov	r6,a
+      0000B2 ED               [12]  536 	mov	a,r5
+      0000B3 3F               [12]  537 	addc	a,r7
+      0000B4 FF               [12]  538 	mov	r7,a
+                           000053   539 	C$Function_Return.c$42$2_0$11 ==.
+                                    540 ;	Function_Return.c:42: i++ ;		  /* Increment i by 1 */
+      0000B5 05 09            [12]  541 	inc	_sum_Do_PARM_2
+                           000055   542 	C$Function_Return.c$43$1_0$10 ==.
+                                    543 ;	Function_Return.c:43: }while (i < 10);  /* As i < 10 Loop else exit */
+      0000B7 74 F6            [12]  544 	mov	a,#0x100 - 0x0a
+      0000B9 25 09            [12]  545 	add	a,_sum_Do_PARM_2
+      0000BB 50 EE            [24]  546 	jnc	00101$
+                           00005B   547 	C$Function_Return.c$44$1_0$10 ==.
+                                    548 ;	Function_Return.c:44: return sum;
+      0000BD 8E 82            [24]  549 	mov	dpl,r6
+      0000BF 8F 83            [24]  550 	mov	dph,r7
+                           00005F   551 	C$Function_Return.c$45$1_0$10 ==.
+                                    552 ;	Function_Return.c:45: }
+                           00005F   553 	C$Function_Return.c$45$1_0$10 ==.
+                           00005F   554 	XG$sum_Do$0$0 ==.
+      0000C1 22               [24]  555 	ret
+                                    556 ;------------------------------------------------------------
+                                    557 ;Allocation info for local variables in function 'sum_For'
+                                    558 ;------------------------------------------------------------
+                                    559 ;i                         Allocated with name '_sum_For_PARM_2'
+                                    560 ;sum                       Allocated to registers r6 r7 
+                                    561 ;------------------------------------------------------------
+                           000060   562 	G$sum_For$0$0 ==.
+                           000060   563 	C$Function_Return.c$47$1_0$13 ==.
+                                    564 ;	Function_Return.c:47: int sum_For(int sum , char i)	  /* Third Function Body */
+                                    565 ;	-----------------------------------------
+                                    566 ;	 function sum_For
+                                    567 ;	-----------------------------------------
+      0000C2                        568 _sum_For:
+      0000C2 AE 82            [24]  569 	mov	r6,dpl
+      0000C4 AF 83            [24]  570 	mov	r7,dph
+                           000064   571 	C$Function_Return.c$49$2_0$14 ==.
+                                    572 ;	Function_Return.c:49: for (i = 0; i < 10 ; i++) /* For Loop statment */
+      0000C6 75 0A 00         [24]  573 	mov	_sum_For_PARM_2,#0x00
+      0000C9                        574 00102$:
+                           000067   575 	C$Function_Return.c$51$3_0$15 ==.
+                                    576 ;	Function_Return.c:51: sum += i;	  /* Accumlate sum here no need for increment*/
+      0000C9 AC 0A            [24]  577 	mov	r4,_sum_For_PARM_2
+      0000CB 7D 00            [12]  578 	mov	r5,#0x00
+      0000CD EC               [12]  579 	mov	a,r4
+      0000CE 2E               [12]  580 	add	a,r6
+      0000CF FE               [12]  581 	mov	r6,a
+      0000D0 ED               [12]  582 	mov	a,r5
+      0000D1 3F               [12]  583 	addc	a,r7
+      0000D2 FF               [12]  584 	mov	r7,a
+                           000071   585 	C$Function_Return.c$49$2_0$14 ==.
+                                    586 ;	Function_Return.c:49: for (i = 0; i < 10 ; i++) /* For Loop statment */
+      0000D3 05 0A            [12]  587 	inc	_sum_For_PARM_2
+      0000D5 74 F6            [12]  588 	mov	a,#0x100 - 0x0a
+      0000D7 25 0A            [12]  589 	add	a,_sum_For_PARM_2
+      0000D9 50 EE            [24]  590 	jnc	00102$
+                           000079   591 	C$Function_Return.c$53$1_0$13 ==.
+                                    592 ;	Function_Return.c:53: return sum;		  /* Now the function return an int value */
+      0000DB 8E 82            [24]  593 	mov	dpl,r6
+      0000DD 8F 83            [24]  594 	mov	dph,r7
+                           00007D   595 	C$Function_Return.c$54$1_0$13 ==.
+                                    596 ;	Function_Return.c:54: }
+                           00007D   597 	C$Function_Return.c$54$1_0$13 ==.
+                           00007D   598 	XG$sum_For$0$0 ==.
+      0000DF 22               [24]  599 	ret
+                                    600 	.area CSEG    (CODE)
+                                    601 	.area CONST   (CODE)
+                                    602 	.area XINIT   (CODE)
+                                    603 	.area CABS    (ABS,CODE)
